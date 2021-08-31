@@ -67,16 +67,120 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BackEndPages\GeneralUserPages\LoginDefault.aspx" />
+    <Content Include="BackEndPages\GeneralUserPages\VaccinationRecord.aspx" />
+    <Content Include="BackEndPages\GeneralUserPages\WillingVaccination.aspx" />
+    <Content Include="BackEndPages\SystemAdminPages\LoginDefault.aspx" />
+    <Content Include="BackEndPages\SystemAdminPages\UserMatchResult.aspx" />
+    <Content Include="BackEndPages\SystemAdminPages\VaccineMatch.aspx" />
+    <Content Include="FrontEndPages\ChangePWD.aspx" />
+    <Content Include="FrontEndPages\Default.aspx" />
+    <Content Include="FrontEndPages\Login.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="TestPage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackEndPages\GeneralUserPages\LoginDefault.aspx.cs">
+      <DependentUpon>LoginDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEndPages\GeneralUserPages\LoginDefault.aspx.designer.cs">
+      <DependentUpon>LoginDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEndPages\GeneralUserPages\VaccinationRecord.aspx.cs">
+      <DependentUpon>VaccinationRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEndPages\GeneralUserPages\VaccinationRecord.aspx.designer.cs">
+      <DependentUpon>VaccinationRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEndPages\GeneralUserPages\WillingVaccination.aspx.cs">
+      <DependentUpon>WillingVaccination.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEndPages\GeneralUserPages\WillingVaccination.aspx.designer.cs">
+      <DependentUpon>WillingVaccination.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEndPages\SystemAdminPages\LoginDefault.aspx.cs">
+      <DependentUpon>LoginDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEndPages\SystemAdminPages\LoginDefault.aspx.designer.cs">
+      <DependentUpon>LoginDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEndPages\SystemAdminPages\UserMatchResult.aspx.cs">
+      <DependentUpon>UserMatchResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEndPages\SystemAdminPages\UserMatchResult.aspx.designer.cs">
+      <DependentUpon>UserMatchResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEndPages\SystemAdminPages\VaccineMatch.aspx.cs">
+      <DependentUpon>VaccineMatch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEndPages\SystemAdminPages\VaccineMatch.aspx.designer.cs">
+      <DependentUpon>VaccineMatch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEndPages\ChangePWD.aspx.cs">
+      <DependentUpon>ChangePWD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEndPages\ChangePWD.aspx.designer.cs">
+      <DependentUpon>ChangePWD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEndPages\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEndPages\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEndPages\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEndPages\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="MasterPages\FrontMaster.Master.cs">
+      <DependentUpon>FrontMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\FrontMaster.Master.designer.cs">
+      <DependentUpon>FrontMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\GeneralUser.Master.cs">
+      <DependentUpon>GeneralUser.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\GeneralUser.Master.designer.cs">
+      <DependentUpon>GeneralUser.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\SystemAdmin.Master.cs">
+      <DependentUpon>SystemAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\SystemAdmin.Master.designer.cs">
+      <DependentUpon>SystemAdmin.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestPage.aspx.cs">
+      <DependentUpon>TestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestPage.aspx.designer.cs">
+      <DependentUpon>TestPage.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MasterPages\FrontMaster.Master" />
+    <Content Include="MasterPages\GeneralUser.Master" />
+    <Content Include="MasterPages\SystemAdmin.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -87,7 +191,18 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="ExternalTools\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VaccineMatchAuth\VaccineMatchAuth.csproj">
+      <Project>{f2a7dbb4-f87e-43cb-bab6-5ad23e476be8}</Project>
+      <Name>VaccineMatchAuth</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VaccineMatchDBSource\VaccineMatchDBSource.csproj">
+      <Project>{2f08997a-6297-47a1-af49-d2420829a6a2}</Project>
+      <Name>VaccineMatchDBSource</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
