@@ -14,7 +14,7 @@ namespace VaccineMatchDBSource
         public static string GetConnectionString()
         {
             string val = ConfigurationManager.ConnectionStrings["DefaultConnectionString"].ConnectionString;
-            return val; //回傳設定檔的值
+            return val;
         }
 
         public static DataTable ReadDataTable(string connStr, string dbCommand, List<SqlParameter> list)
@@ -53,7 +53,7 @@ namespace VaccineMatchDBSource
                     if (dt.Rows.Count == 0)
                         return null;
 
-                    DataRow dr = dt.Rows[0]; // 舊的搬過來
+                    DataRow dr = dt.Rows[0];
                     return dt.Rows[0];
 
                 }

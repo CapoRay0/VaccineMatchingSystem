@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div>
-    <asp:Label ID="lblAccount" runat="server" Text="帳號"></asp:Label>
+    <asp:Label ID="lblAccount" runat="server" Text="使用者帳號"></asp:Label>
     <asp:TextBox ID="txtAccount" runat="server"></asp:TextBox><br />
     <asp:Label ID="lblOrigPWD" runat="server" Text="請輸入原密碼"></asp:Label>
     <asp:TextBox ID="txtOrigPWD" runat="server"></asp:TextBox><br />

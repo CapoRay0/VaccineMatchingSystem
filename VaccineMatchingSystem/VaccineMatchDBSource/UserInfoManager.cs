@@ -67,7 +67,7 @@ namespace VaccineMatchDBSource
             catch (Exception ex)
             {
                 logger.WriteLog(ex);
-                return 2;
+                return 0;
             }
         }
 

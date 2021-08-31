@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/GeneralUser.Master" AutoEventWireup="true" CodeBehind="LoginDefault.aspx.cs" Inherits="VaccineMatchingSystem.BackEndPages.GeneralUserPages.LoginDefault" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/GeneralUser.Master" AutoEventWireup="true" CodeBehind="LoginDefaultG.aspx.cs" Inherits="VaccineMatchingSystem.BackEndPages.GeneralUserPages.LoginDefault" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

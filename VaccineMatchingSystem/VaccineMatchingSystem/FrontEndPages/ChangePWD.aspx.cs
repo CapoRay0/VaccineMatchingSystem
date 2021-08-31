@@ -13,11 +13,11 @@ namespace VaccineMatchingSystem.FrontEndPages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!AuthManager.IsLogined())
-            {
-                Response.Redirect("Login.aspx");
-                return;
-            }
+            //if (!AuthManager.IsLogined())
+            //{
+            //    Response.Redirect("Login.aspx");
+            //    return;
+            //}
         }
 
         protected void btnConfirm_Click(object sender, EventArgs e)
@@ -33,7 +33,7 @@ namespace VaccineMatchingSystem.FrontEndPages
             UserInfoModel currentUser = AuthManager.GetCurrentUser();
             if (currentUser == null)
             {
-                Response.Redirect("/Front End Pages/Login.aspx");
+                Response.Redirect("Login.aspx");
                 return;
             }
 
@@ -44,7 +44,7 @@ namespace VaccineMatchingSystem.FrontEndPages
             UserInfoManager.UpdatePwd(inp_Account, userID, newPWD);
 
             this.Session["UserLoginInfo"] = null;
-            Response.Redirect("/Front End Pages/Login.aspx");
+            Response.Redirect("Login.aspx");
         }
 
         /// <summary> 驗證使用者密碼更新(錯誤提示) </summary>

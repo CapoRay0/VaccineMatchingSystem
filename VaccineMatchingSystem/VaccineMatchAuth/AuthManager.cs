@@ -11,6 +11,20 @@ namespace VaccineMatchAuth
 {
     public class AuthManager
     {
+
+        #region 登入驗證
+        /// <summary> 檢查目前是否登入 </summary>
+        /// <returns></returns>
+        public static bool IsLogined()
+        {
+            if (HttpContext.Current.Session["UserLoginInfo"] == null)
+                return false;
+            else
+                return true;
+        }
+
+        /// <summary> 取得已登入的使用者資訊 (如果沒有登入就回傳 null) </summary>
+        /// <returns></returns>
         public static UserInfoModel GetCurrentUser()
         {
             string account = HttpContext.Current.Session["UserLoginInfo"] as string;
@@ -41,14 +55,7 @@ namespace VaccineMatchAuth
 
             return model;
         }
-
-        public static bool IsLogined()
-        {
-            if (HttpContext.Current.Session["UserLoginInfo"] == null)
-                return false;
-            else
-                return true;
-        }
+        #endregion
 
 
         #region 登入/登出
@@ -81,7 +88,7 @@ namespace VaccineMatchAuth
             if (string.Compare(dr["Account"].ToString(), account, true) == 0 &&
                 string.Compare(dr["Password"].ToString(), pwd, false) == 0) // 因密碼要強制大小寫因此設定為false
             {
-                HttpContext.Current.Session["UserLoginInfo"] = dr["Account"].ToString(); // Session的變數名稱為UserLoginInfo ， 值為dr["Account"]   // 正確!!，跳頁至 UserInfo.aspx
+                HttpContext.Current.Session["UserLoginInfo"] = dr["Account"].ToString(); // 正確!!，跳頁至 UserInfo.aspx
                 errorMsg = string.Empty;
                 return true;
             }
@@ -100,5 +107,6 @@ namespace VaccineMatchAuth
             HttpContext.Current.Session["UserLoginInfo"] = null;
         }
         #endregion
+
     }
 }

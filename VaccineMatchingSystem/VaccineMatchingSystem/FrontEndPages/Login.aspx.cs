@@ -19,11 +19,11 @@ namespace VaccineMatchingSystem.FrontEndPages
                 int dr = UserInfoManager.GetAccountUserLevel(UserAccount);
                 if (dr == 0)
                 {
-                    Response.Redirect("/Back End Pages/System Administrator/LoginDefault.aspx");
+                    Response.Redirect("/BackEndPages/SystemAdminPages/LoginDefaultS.aspx");
                 }
                 else
                 {
-                    Response.Redirect("/Back End Pages/GeneralUser/LoginDefault.aspx");
+                    Response.Redirect("/BackEndPages/GeneralUserPages/LoginDefaultG.aspx");
                 }
             }
             //else
@@ -41,7 +41,7 @@ namespace VaccineMatchingSystem.FrontEndPages
 
         protected void btnForgetPWD_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/Back End Pages/GeneralUser/ChangePWD.aspx");
+            Response.Redirect("ChangePWD.aspx");
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -56,18 +56,18 @@ namespace VaccineMatchingSystem.FrontEndPages
             }
             if (inp_Account == inp_PWD)
             {
-                Response.Redirect("/Back End Pages/GeneralUser/ChangePWD.aspx");
+                Response.Redirect("ChangePWD.aspx");
             }
             else
             {
                 var dr = UserInfoManager.GetAccountUserLevel(inp_Account);
                 if (dr == 0)
                 {
-                    Response.Redirect("/Back End Pages/System Administrator/LoginDefault.aspx");
+                    Response.Redirect("/BackEndPages/SystemAdminPages/LoginDefaultS.aspx");
                 }
                 else
                 {
-                    Response.Redirect("/Back End Pages/GeneralUser/LoginDefault.aspx");
+                    Response.Redirect("/BackEndPages/GeneralUserPages/LoginDefaultG.aspx");
                 }
             }
         }
