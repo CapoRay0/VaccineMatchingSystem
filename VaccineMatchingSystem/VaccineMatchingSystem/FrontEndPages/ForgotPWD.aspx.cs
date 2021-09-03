@@ -31,7 +31,8 @@ namespace VaccineMatchingSystem.FrontEndPages
             UserInfoManager.ChangePwd(inp_Name, inp_ID, NewPwd);
 
 
-            Response.Redirect("Login.aspx");
+            //Response.Redirect("Login.aspx");
+            this.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('您的密碼已更改成功!')</script>");
         }
 
         private bool CheckInput(out List<string> errorMsgList)
@@ -79,13 +80,13 @@ namespace VaccineMatchingSystem.FrontEndPages
                 return false;
             }
 
-            // 檢查帳號及身分證id是否存在
+            // 檢查姓名及身分證是否存在
             string inp_Name = this.txtName.Text;
             string inp_ID = this.txtID.Text;
             
-            if (!UserInfoManager.CheckInfoIsCorrect(inp_Name, inp_ID))
+            if (!UserInfoManager.CheckInfoIsCorrectForForgotPWD(inp_Name, inp_ID))
             {
-                msgList.Add("請確認帳號及身分證id是否正確");
+                msgList.Add("請確認姓名及身分證是否正確");
                 errorMsgList = msgList;
                 return false;
             }

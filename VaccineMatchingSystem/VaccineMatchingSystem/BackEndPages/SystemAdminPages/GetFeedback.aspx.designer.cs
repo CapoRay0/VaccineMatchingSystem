@@ -7,38 +7,38 @@
 // </自動產生的>
 //------------------------------------------------------------------------------
 
-namespace VaccineMatchingSystem.MasterPages
+namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
 {
 
 
-    public partial class GeneralUser
+    public partial class GetFeedback
     {
 
         /// <summary>
-        /// head 控制項。
+        /// RepeaterbtnGetFeedback 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.Button RepeaterbtnGetFeedback;
 
         /// <summary>
-        /// form1 控制項。
+        /// GridViewFeedback 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.GridView GridViewFeedback;
 
         /// <summary>
-        /// ContentPlaceHolder1 控制項。
+        /// btnToExcel 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Button btnToExcel;
     }
 }

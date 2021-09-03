@@ -72,10 +72,6 @@ namespace VaccineMatchDBSource
                 logger.WriteLog(ex);
             }
         }
-
-
-
-
         public static bool CheckWillingIfChecked(Guid userGuid)
         {
             string connStr = DBHelper.GetConnectionString();

@@ -69,13 +69,13 @@ namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
         protected global::System.Web.UI.WebControls.Label lblReaseon;
 
         /// <summary>
-        /// RadioButtonList1 控制項。
+        /// DropDownList1 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
 
         /// <summary>
         /// lblFeedback 控制項。
@@ -130,5 +130,14 @@ namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSend;
+
+        /// <summary>
+        /// btnClear 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnClear;
     }
 }

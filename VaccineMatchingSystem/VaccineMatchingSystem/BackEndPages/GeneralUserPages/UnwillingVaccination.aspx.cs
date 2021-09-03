@@ -18,20 +18,36 @@ namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
                 Response.Redirect("/FrontEndPages/Login.aspx");
                 return;
             }
+            this.DropDownList1.SelectedIndex = 0;        
+        }
 
+        protected void btnSend_Click(object sender, EventArgs e)
+        {
             var CurrentUser = AuthManager.GetCurrentUser();
 
             Guid CurrentUserGuid = CurrentUser.UserID;
 
-            string inp_Name = txtName.Text;
-            string inp_Email = txtName.Text;
-            
-            string ReasonText = RadioButtonList1.SelectedValue;
-            int Reason = Convert.ToInt32(ReasonText); // 這裡還沒修好
-            string Feedback = txtFeedback.InnerText;
+
+            if (string.IsNullOrWhiteSpace(txtEmail.Text))
+            {
+                this.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('請填入Email')</script>");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtName.Text))
+            {
+                this.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('請填入姓名')</script>");
+                return;
+            }
+
+            string inp_Name = this.txtName.Text;
+            string inp_Email = this.txtEmail.Text;
+            string ReaseonText = this.DropDownList1.SelectedValue;
+            int Reason = Convert.ToInt32(ReaseonText);
+
+            string Feedback = this.txtFeedback.InnerText;
 
             int RecSysUpdate;
-            if (RBYesFeedback.Checked)
+            if (this.RBYesFeedback.Checked)
             {
                 RecSysUpdate = 0;
             }
@@ -42,6 +58,13 @@ namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
 
             DBHelper.InsertUserFeedback(CurrentUserGuid, inp_Name, inp_Email, Reason, Feedback, RecSysUpdate);
             Response.Redirect("/FrontEndPages/Default.aspx");
+        }
+
+        protected void btnClear_Click(object sender, EventArgs e)
+        {
+            this.txtName.Text = "";
+            this.txtEmail.Text = "";
+            this.txtFeedback.InnerText = "";
         }
     }
 }

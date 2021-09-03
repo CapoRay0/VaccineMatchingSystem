@@ -3,13 +3,13 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div>
-        <asp:Literal ID="ltlTitleShow" runat="server"></asp:Literal><br />
+        <h2><asp:Literal ID="ltlTitleShow" runat="server"></asp:Literal></h2><br /><br />
     </div>
-    <div>
+    <div>   
         <%--<asp:GridView ID="GridViewCurrentUserInfo" runat="server"></asp:GridView><br />--%>
         <asp:Repeater ID="RepeaterCurrentUserInfo" runat="server">
             <ItemTemplate>
-                <div style="border: 1px solid black;">
+                <div <%--style="border: 1px solid black;"--%>>
                     <h2>年齡：<%# Eval("Age") + "歲" %></h2>
                     <h2>性別：<%# Convert.ToInt32(Eval("Gender")) == 1 ? "男性":"女性" %></h2>
                     <h2>職業：<%# Eval("Occupation") %></h2>

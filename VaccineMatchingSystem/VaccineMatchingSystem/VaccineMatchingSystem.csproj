@@ -71,6 +71,7 @@
     <Content Include="BackEndPages\GeneralUserPages\UnwillingVaccination.aspx" />
     <Content Include="BackEndPages\GeneralUserPages\VaccinationRecord.aspx" />
     <Content Include="BackEndPages\GeneralUserPages\WillingVaccination.aspx" />
+    <Content Include="BackEndPages\SystemAdminPages\GetFeedback.aspx" />
     <Content Include="BackEndPages\SystemAdminPages\LoginDefaultS.aspx" />
     <Content Include="BackEndPages\SystemAdminPages\UserMatchResult.aspx" />
     <Content Include="BackEndPages\SystemAdminPages\VaccineMatch.aspx" />
@@ -109,6 +110,13 @@
     </Compile>
     <Compile Include="BackEndPages\GeneralUserPages\WillingVaccination.aspx.designer.cs">
       <DependentUpon>WillingVaccination.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEndPages\SystemAdminPages\GetFeedback.aspx.cs">
+      <DependentUpon>GetFeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEndPages\SystemAdminPages\GetFeedback.aspx.designer.cs">
+      <DependentUpon>GetFeedback.aspx</DependentUpon>
     </Compile>
     <Compile Include="BackEndPages\SystemAdminPages\LoginDefaultS.aspx.cs">
       <DependentUpon>LoginDefaultS.aspx</DependentUpon>
@@ -203,6 +211,14 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AlgorithmData\AlgorithmData.csproj">
+      <Project>{F8216231-B525-4683-9D91-1AB5CB2BA3C2}</Project>
+      <Name>AlgorithmData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataFormatTransfer\DataFormatTransfer.csproj">
+      <Project>{367E9576-5477-4318-85B7-0804B1B3F607}</Project>
+      <Name>DataFormatTransfer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VaccineMatchAuth\VaccineMatchAuth.csproj">
       <Project>{f2a7dbb4-f87e-43cb-bab6-5ad23e476be8}</Project>
       <Name>VaccineMatchAuth</Name>

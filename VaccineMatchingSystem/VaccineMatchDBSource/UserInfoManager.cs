@@ -227,7 +227,44 @@ namespace VaccineMatchDBSource
         }
 
 
-        public static bool CheckInfoIsCorrect(string Name, string ID)
+        public static bool CheckInfoIsCorrectForChangPWD(string Account, string PWD)
+        {
+            string connStr = DBHelper.GetConnectionString();
+            string dbCommand =
+                $@" SELECT 
+                        [Account]
+                        ,[Password]
+                    FROM [UserInfo]
+                    WHERE Account = @account AND Password = @pwd";
+
+            List<SqlParameter> paramList = new List<SqlParameter>();
+            paramList.Add(new SqlParameter("@account", Account));
+            paramList.Add(new SqlParameter("@pwd", PWD));
+
+            try
+            {
+                var dr = DBHelper.ReadDataRow(connStr, dbCommand, paramList);
+
+                if (CheckDataRowIsNull(dr))
+                {
+                    var OrigAccount = dr[0].ToString();
+                    var OrigPWD = dr[1].ToString();
+                    if (Account.Trim() == OrigAccount.Trim() && PWD.Trim() == OrigPWD.Trim())
+                    {
+                        return true;
+                    }
+                    else
+                        return false;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                logger.WriteLog(ex);
+                return false;
+            }
+        }
+        public static bool CheckInfoIsCorrectForForgotPWD(string Name, string ID)
         {
             string connStr = DBHelper.GetConnectionString();
             string dbCommand =

@@ -10,7 +10,7 @@
     <%-- 引用外部套件區 --%>
     <link href="../ExternalTools/css/bootstrap.css" rel="stylesheet" />
     <script src="../ExternalTools/js/bootstrap.js"></script>
-    <script src="../ExternalTools/jquery-3.6.0.min.js"></script>
+   <%-- <script src="../ExternalTools/jquery-3.6.0.min.js"></script>--%>
 
     <%-- CSS編輯區 --%>
     <style type="text/css">

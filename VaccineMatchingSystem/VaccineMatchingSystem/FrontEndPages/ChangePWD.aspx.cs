@@ -45,7 +45,9 @@ namespace VaccineMatchingSystem.FrontEndPages
             UserInfoManager.UpdatePwd(inp_Account, userID, newPWD);
 
             this.Session["UserLoginInfo"] = null;
-            Response.Redirect("Login.aspx");
+
+            //Response.Redirect("Login.aspx");
+            this.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('您的密碼已更改成功!')</script>");
         }
 
         /// <summary> 驗證使用者密碼更新(錯誤提示) </summary>
@@ -99,6 +101,17 @@ namespace VaccineMatchingSystem.FrontEndPages
             if (txtNewPWD.Text.Trim() != txtPWDconf.Text.Trim())
             {
                 msgList.Add("請確認新密碼是否一致");
+                errorMsgList = msgList;
+                return false;
+            }
+
+            // 檢查帳號及原密碼是否存在
+            string inp_Account = this.txtAccount.Text;
+            string inp_PWD = this.txtOrigPWD.Text;
+
+            if (!UserInfoManager.CheckInfoIsCorrectForChangPWD(inp_Account, inp_PWD))
+            {
+                msgList.Add("請確認帳號及密碼是否正確");
                 errorMsgList = msgList;
                 return false;
             }
