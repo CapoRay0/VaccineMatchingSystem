@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BackEndPages\GeneralUserPages\LoginDefaultG.aspx" />
+    <Content Include="BackEndPages\GeneralUserPages\UnwillingVaccination.aspx" />
     <Content Include="BackEndPages\GeneralUserPages\VaccinationRecord.aspx" />
     <Content Include="BackEndPages\GeneralUserPages\WillingVaccination.aspx" />
     <Content Include="BackEndPages\SystemAdminPages\LoginDefaultS.aspx" />
@@ -75,6 +76,7 @@
     <Content Include="BackEndPages\SystemAdminPages\VaccineMatch.aspx" />
     <Content Include="FrontEndPages\ChangePWD.aspx" />
     <Content Include="FrontEndPages\Default.aspx" />
+    <Content Include="FrontEndPages\ForgotPWD.aspx" />
     <Content Include="FrontEndPages\Login.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -86,6 +88,13 @@
     </Compile>
     <Compile Include="BackEndPages\GeneralUserPages\LoginDefaultG.aspx.designer.cs">
       <DependentUpon>LoginDefaultG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEndPages\GeneralUserPages\UnwillingVaccination.aspx.cs">
+      <DependentUpon>UnwillingVaccination.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEndPages\GeneralUserPages\UnwillingVaccination.aspx.designer.cs">
+      <DependentUpon>UnwillingVaccination.aspx</DependentUpon>
     </Compile>
     <Compile Include="BackEndPages\GeneralUserPages\VaccinationRecord.aspx.cs">
       <DependentUpon>VaccinationRecord.aspx</DependentUpon>
@@ -135,6 +144,13 @@
     </Compile>
     <Compile Include="FrontEndPages\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEndPages\ForgotPWD.aspx.cs">
+      <DependentUpon>ForgotPWD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEndPages\ForgotPWD.aspx.designer.cs">
+      <DependentUpon>ForgotPWD.aspx</DependentUpon>
     </Compile>
     <Compile Include="FrontEndPages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

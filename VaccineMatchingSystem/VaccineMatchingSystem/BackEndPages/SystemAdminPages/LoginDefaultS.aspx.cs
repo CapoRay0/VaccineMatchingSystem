@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using VaccineMatchDBSource;
 
 namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
 {
@@ -11,7 +12,9 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            this.ltlShowTotalUserNumb.Text = UserInfoManager.GetGeneralUserCount();
+            this.ltlShowTotalAdminUserNumb.Text = UserInfoManager.GetSystemAdminCount();
+            this.ltlWillingNumb.Text = UserInfoManager.GetWillingCount();
         }
     }
 }

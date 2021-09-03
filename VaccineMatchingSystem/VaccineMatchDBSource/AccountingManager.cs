@@ -38,5 +38,81 @@ namespace VaccineMatchDBSource
                 return null;
             }
         }
+
+
+        public static void InsertUserWillingVaccin(Guid userGuid, string WillingRecord)
+        {
+            string connStr = DBHelper.GetConnectionString();
+            string dbCommand =
+                $@" 
+                    INSERT INTO [WillingRegister]
+                    (
+                        [UserID] 
+                        ,[IsEffective]
+                        ,[VaccineWilling]
+                    )
+                    VALUES 
+                    (
+                        @userID
+                        ,1
+                        ,@VaccineWilling
+                    )
+                ";
+
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@userID", userGuid));
+            list.Add(new SqlParameter("@VaccineWilling", WillingRecord));
+
+            try
+            {
+                DBHelper.CreatData(connStr, dbCommand, list);
+            }
+            catch (Exception ex)
+            {
+                logger.WriteLog(ex);
+            }
+        }
+
+
+
+
+        public static bool CheckWillingIfChecked(Guid userGuid)
+        {
+            string connStr = DBHelper.GetConnectionString();
+            string dbCommand =
+                $@" SELECT 
+                        [UserID]
+                        ,[IsEffective]
+                    FROM [WillingRegister]
+                    WHERE IsEffective = 1 AND UserID = @userID";
+
+            List<SqlParameter> paramList = new List<SqlParameter>();
+            paramList.Add(new SqlParameter("@userID", userGuid));
+
+            try
+            {
+                var dr = DBHelper.ReadDataRow(connStr, dbCommand, paramList);
+
+                if (CheckWillingIsNull(dr))
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                logger.WriteLog(ex);
+                return false;
+            }
+        }
+        public static bool CheckWillingIsNull(DataRow dataRow)
+        {
+            if (dataRow == null)
+            {
+                return true;
+            }
+            return false;
+        }
+
     }
 }

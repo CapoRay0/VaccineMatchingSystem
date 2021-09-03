@@ -4,21 +4,15 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using VaccineMatchAuth;
 using VaccineMatchDBSource;
 
 namespace VaccineMatchingSystem.FrontEndPages
 {
-    public partial class ChangePWD : System.Web.UI.Page
+    public partial class ForgetPWD : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (!AuthManager.IsLogined())
-            {
-                Response.Redirect("Login.aspx");
-                return;
-            }
         }
 
         protected void btnConfirm_Click(object sender, EventArgs e)
@@ -30,43 +24,32 @@ namespace VaccineMatchingSystem.FrontEndPages
                 return;
             }
 
-            //如果沒有登入就回頭
-            UserInfoModel currentUser = AuthManager.GetCurrentUser();
-            if (currentUser == null)
-            {
-                Response.Redirect("Login.aspx");
-                return;
-            }
+            string inp_Name = this.txtName.Text;
+            string inp_ID = this.txtID.Text;
+            string NewPwd = this.txtNewPWD.Text;
 
-            string inp_Account = txtAccount.Text;
-            Guid userID = currentUser.UserID;
-            string newPWD = txtNewPWD.Text;
+            UserInfoManager.ChangePwd(inp_Name, inp_ID, NewPwd);
 
-            UserInfoManager.UpdatePwd(inp_Account, userID, newPWD);
 
-            this.Session["UserLoginInfo"] = null;
             Response.Redirect("Login.aspx");
         }
 
-        /// <summary> 驗證使用者密碼更新(錯誤提示) </summary>
-        /// <param name="errorMsgList"></param>
-        /// <returns></returns>
         private bool CheckInput(out List<string> errorMsgList)
         {
             List<string> msgList = new List<string>();
 
-            // 帳號 必填
-            if (string.IsNullOrWhiteSpace(this.txtAccount.Text))
+            // 姓名 必填
+            if (string.IsNullOrWhiteSpace(this.txtName.Text))
             {
-                msgList.Add("請輸入帳號");
+                msgList.Add("請輸入姓名");
                 errorMsgList = msgList;
                 return false;
             }
 
-            // 原密碼 必填
-            if (string.IsNullOrWhiteSpace(this.txtOrigPWD.Text))
+            // 身分證id 必填
+            if (string.IsNullOrWhiteSpace(this.txtID.Text))
             {
-                msgList.Add("請輸入原密碼");
+                msgList.Add("請輸入身分證");
                 errorMsgList = msgList;
                 return false;
             }
@@ -87,13 +70,6 @@ namespace VaccineMatchingSystem.FrontEndPages
                 return false;
             }
 
-            // 原密碼及新密碼不得相同
-            if (string.Compare(txtOrigPWD.Text, txtNewPWD.Text, false) == 0)
-            {
-                msgList.Add("原密碼及新密碼不得相同");
-                errorMsgList = msgList;
-                return false;
-            }
 
             // 新密碼及確認新密碼須為一致
             if (txtNewPWD.Text.Trim() != txtPWDconf.Text.Trim())
@@ -103,7 +79,20 @@ namespace VaccineMatchingSystem.FrontEndPages
                 return false;
             }
 
+            // 檢查帳號及身分證id是否存在
+            string inp_Name = this.txtName.Text;
+            string inp_ID = this.txtID.Text;
+            
+            if (!UserInfoManager.CheckInfoIsCorrect(inp_Name, inp_ID))
+            {
+                msgList.Add("請確認帳號及身分證id是否正確");
+                errorMsgList = msgList;
+                return false;
+            }
+
+
             errorMsgList = msgList;
+
 
             if (msgList.Count == 0)
                 return true;

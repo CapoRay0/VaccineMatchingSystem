@@ -11,115 +11,124 @@ namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
 {
 
 
-    public partial class WillingVaccination
+    public partial class UnwillingVaccination1
     {
 
         /// <summary>
-        /// ltlTitleShow 控制項。
+        /// Literal1 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltlTitleShow;
+        protected global::System.Web.UI.WebControls.Literal Literal1;
 
         /// <summary>
-        /// lblVaccAZ 控制項。
+        /// lblName 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblVaccAZ;
+        protected global::System.Web.UI.WebControls.Label lblName;
 
         /// <summary>
-        /// CheckBoxVaccAZ 控制項。
+        /// txtName 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBoxVaccAZ;
+        protected global::System.Web.UI.WebControls.TextBox txtName;
 
         /// <summary>
-        /// LinkVaccAZ 控制項。
+        /// lblEmail 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkVaccAZ;
+        protected global::System.Web.UI.WebControls.Label lblEmail;
 
         /// <summary>
-        /// lblVaccMoz 控制項。
+        /// txtEmail 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblVaccMoz;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
-        /// CheckBoxVaccMoz 控制項。
+        /// lblReaseon 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBoxVaccMoz;
+        protected global::System.Web.UI.WebControls.Label lblReaseon;
 
         /// <summary>
-        /// LinkVaccMoz 控制項。
+        /// RadioButtonList1 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkVaccMoz;
+        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
 
         /// <summary>
-        /// lblVaccBNT 控制項。
+        /// lblFeedback 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblVaccBNT;
+        protected global::System.Web.UI.WebControls.Label lblFeedback;
 
         /// <summary>
-        /// CheckBoxVaccBNT 控制項。
+        /// txtFeedback 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBoxVaccBNT;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea txtFeedback;
 
         /// <summary>
-        /// LinkVaccBNT 控制項。
+        /// Label1 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkVaccBNT;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// btnConfirm 控制項。
+        /// RBYesFeedback 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnConfirm;
+        protected global::System.Web.UI.WebControls.RadioButton RBYesFeedback;
 
         /// <summary>
-        /// btnReject 控制項。
+        /// RBNoFeedback 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnReject;
+        protected global::System.Web.UI.WebControls.RadioButton RBNoFeedback;
+
+        /// <summary>
+        /// btnSend 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSend;
     }
 }

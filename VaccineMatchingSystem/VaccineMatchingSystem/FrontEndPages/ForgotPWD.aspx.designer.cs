@@ -7,102 +7,93 @@
 // </自動產生的>
 //------------------------------------------------------------------------------
 
-namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
+namespace VaccineMatchingSystem.FrontEndPages
 {
 
 
-    public partial class WillingVaccination
+    public partial class ForgetPWD
     {
 
         /// <summary>
-        /// ltlTitleShow 控制項。
+        /// lblName 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltlTitleShow;
+        protected global::System.Web.UI.WebControls.Label lblName;
 
         /// <summary>
-        /// lblVaccAZ 控制項。
+        /// txtName 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblVaccAZ;
+        protected global::System.Web.UI.WebControls.TextBox txtName;
 
         /// <summary>
-        /// CheckBoxVaccAZ 控制項。
+        /// lblID 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBoxVaccAZ;
+        protected global::System.Web.UI.WebControls.Label lblID;
 
         /// <summary>
-        /// LinkVaccAZ 控制項。
+        /// txtID 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkVaccAZ;
+        protected global::System.Web.UI.WebControls.TextBox txtID;
 
         /// <summary>
-        /// lblVaccMoz 控制項。
+        /// lblNewPWD 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblVaccMoz;
+        protected global::System.Web.UI.WebControls.Label lblNewPWD;
 
         /// <summary>
-        /// CheckBoxVaccMoz 控制項。
+        /// txtNewPWD 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBoxVaccMoz;
+        protected global::System.Web.UI.WebControls.TextBox txtNewPWD;
 
         /// <summary>
-        /// LinkVaccMoz 控制項。
+        /// lblPWDconf 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkVaccMoz;
+        protected global::System.Web.UI.WebControls.Label lblPWDconf;
 
         /// <summary>
-        /// lblVaccBNT 控制項。
+        /// txtPWDconf 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblVaccBNT;
+        protected global::System.Web.UI.WebControls.TextBox txtPWDconf;
 
         /// <summary>
-        /// CheckBoxVaccBNT 控制項。
+        /// litMSG 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBoxVaccBNT;
-
-        /// <summary>
-        /// LinkVaccBNT 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkVaccBNT;
+        protected global::System.Web.UI.WebControls.Literal litMSG;
 
         /// <summary>
         /// btnConfirm 控制項。
@@ -112,14 +103,5 @@ namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnConfirm;
-
-        /// <summary>
-        /// btnReject 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnReject;
     }
 }

@@ -13,5 +13,59 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
 
     public partial class LoginDefault
     {
+
+        /// <summary>
+        /// lblShowTotalUserNumb 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblShowTotalUserNumb;
+
+        /// <summary>
+        /// ltlShowTotalUserNumb 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltlShowTotalUserNumb;
+
+        /// <summary>
+        /// lblShowTotalAdminUserNumb 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblShowTotalAdminUserNumb;
+
+        /// <summary>
+        /// ltlShowTotalAdminUserNumb 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltlShowTotalAdminUserNumb;
+
+        /// <summary>
+        /// lblWillingNumb 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblWillingNumb;
+
+        /// <summary>
+        /// ltlWillingNumb 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltlWillingNumb;
     }
 }

@@ -28,8 +28,8 @@ namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
 
                 DataTable dt = UserInfoManager.GetUserInfoFor(CurrentUserGuid);
 
-                this.GridViewCurrentUserInfo.DataSource = dt;
-                this.GridViewCurrentUserInfo.DataBind();
+                this.RepeaterCurrentUserInfo.DataSource = dt;
+                this.RepeaterCurrentUserInfo.DataBind();
 
                 if (CurrentUser.Gender == 1)
                 {

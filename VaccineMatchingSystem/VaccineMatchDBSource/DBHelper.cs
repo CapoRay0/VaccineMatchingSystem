@@ -75,5 +75,62 @@ namespace VaccineMatchDBSource
                 }
             }
         }
+
+        public static void InsertUserFeedback(Guid userGuid, string Username, string UserEmail, int Reason, string UserFeedback, int Feedbackget)
+        {
+            string connStr = DBHelper.GetConnectionString();
+            string dbCommand =
+                $@"INSERT INTO [Feedback]
+                    (
+                        [UserID]
+                       ,[FName]
+                       ,[Email]
+                       ,[Reason]
+                       ,[Opinion]
+                       ,[FeedbackGet] 
+                    )
+                    VALUES
+                    (
+                        @ID
+                       ,@Name
+                       ,@Email
+                       ,@Reason
+                       ,@UserFeedback                    
+                       ,@Feedbackget
+                    )
+                ";
+
+            List<SqlParameter> paramList = new List<SqlParameter>();
+            paramList.Add(new SqlParameter("@ID", userGuid));
+            paramList.Add(new SqlParameter("@Name", Username));
+            paramList.Add(new SqlParameter("@Email", UserEmail));
+            paramList.Add(new SqlParameter("@Reason", Reason));
+            paramList.Add(new SqlParameter("@UserFeedback", UserFeedback));
+            paramList.Add(new SqlParameter("@Feedbackget", Feedbackget));
+
+            try
+            {
+                DBHelper.CreatData(connStr, dbCommand, paramList);
+            }
+            catch (Exception ex)
+            {
+                logger.WriteLog(ex);
+            }
+        }
+
+        public static void CreatData(string connStr, string dbCommand, List<SqlParameter> paramList)
+        {
+            // connect db & execute
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                using (SqlCommand comm = new SqlCommand(dbCommand, conn))
+                {
+                    comm.Parameters.AddRange(paramList.ToArray());
+
+                    conn.Open();
+                    comm.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }
