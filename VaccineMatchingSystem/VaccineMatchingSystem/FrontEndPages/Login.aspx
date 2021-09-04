@@ -15,6 +15,7 @@
         <asp:Literal ID="ltlMsg" runat="server"></asp:Literal><br />
         <asp:Label ID="lblVerification" runat="server" Text="驗證碼"></asp:Label>
         <asp:Label ID="lblCode" runat="server" Text="驗證碼"></asp:Label>
+        <img src="DrawingVerification.ashx" />
         <asp:TextBox ID="txtConfirmCode" runat="server"></asp:TextBox>
     </div>
 
