@@ -20,7 +20,7 @@ namespace VaccineMatchingSystem.FrontEndPages
             List<string> msgList = new List<string>();
             if (!this.CheckInput(out msgList))
             {
-                this.litMSG.Text = string.Join("<br/>", msgList);
+                this.lblMsg.Text = string.Join("<br/>", msgList);
                 return;
             }
 
@@ -84,7 +84,7 @@ namespace VaccineMatchingSystem.FrontEndPages
             string inp_Name = this.txtName.Text;
             string inp_ID = this.txtID.Text;
             
-            if (!UserInfoManager.CheckInfoIsCorrectForForgotPWD(inp_Name, inp_ID))
+            if (UserInfoManager.CheckInfoIsCorrectForForgotPWD(inp_Name, inp_ID))
             {
                 msgList.Add("請確認姓名及身分證是否正確");
                 errorMsgList = msgList;

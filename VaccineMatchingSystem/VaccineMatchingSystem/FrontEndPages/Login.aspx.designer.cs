@@ -51,15 +51,6 @@ namespace VaccineMatchingSystem.FrontEndPages
         protected global::System.Web.UI.WebControls.TextBox txtPWD;
 
         /// <summary>
-        /// ltlMsg 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltlMsg;
-
-        /// <summary>
         /// lblVerification 控制項。
         /// </summary>
         /// <remarks>
@@ -67,15 +58,6 @@ namespace VaccineMatchingSystem.FrontEndPages
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblVerification;
-
-        /// <summary>
-        /// lblCode 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCode;
 
         /// <summary>
         /// txtConfirmCode 控制項。
@@ -103,5 +85,14 @@ namespace VaccineMatchingSystem.FrontEndPages
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnForgetPWD;
+
+        /// <summary>
+        /// lblMsg 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMsg;
     }
 }

@@ -26,7 +26,7 @@ namespace VaccineMatchingSystem.FrontEndPages
             List<string> msgList = new List<string>();
             if (!this.CheckInput(out msgList))
             {
-                this.litMSG.Text = string.Join("<br/>", msgList);
+                this.lblMsg.Text = string.Join("<br/>", msgList);
                 return;
             }
 
@@ -109,7 +109,7 @@ namespace VaccineMatchingSystem.FrontEndPages
             string inp_Account = this.txtAccount.Text;
             string inp_PWD = this.txtOrigPWD.Text;
 
-            if (!UserInfoManager.CheckInfoIsCorrectForChangPWD(inp_Account, inp_PWD))
+            if (UserInfoManager.CheckInfoIsCorrectForChangPWD(inp_Account, inp_PWD))
             {
                 msgList.Add("請確認帳號及密碼是否正確");
                 errorMsgList = msgList;

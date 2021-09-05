@@ -19,6 +19,6 @@
 
     <%-- Html頁面編輯區 --%>
 
-    <asp:Button ID="btnToLogin" runat="server" Text="進入系統" OnClick="btnToLogin_Click"/>
+    <asp:Button CssClass="btn btn-outline-primary" ID="btnToLogin" runat="server" Text="進入系統" OnClick="btnToLogin_Click"/>
 
 </asp:Content>

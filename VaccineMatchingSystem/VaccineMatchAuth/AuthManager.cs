@@ -71,7 +71,7 @@ namespace VaccineMatchAuth
             // check empty
             if (string.IsNullOrWhiteSpace(account) || string.IsNullOrWhiteSpace(pwd))
             {
-                errorMsg = "Account / PWD is required.";
+                errorMsg = "請輸入帳號 / 密碼";
                 return false;
             }
 
@@ -82,7 +82,7 @@ namespace VaccineMatchAuth
             //check null
             if (dr == null)
             {
-                errorMsg = $"Account: {account} doesn't exists."; // 查不到的話
+                errorMsg = $"帳號： {account} 並不存在"; // 查不到的話
                 return false;
             }
 
@@ -96,7 +96,7 @@ namespace VaccineMatchAuth
             }
             else
             {
-                errorMsg = "Login failed. Please check PWD.";
+                errorMsg = "登入失敗，請檢查密碼是否正確";
                 return false;
             }
 

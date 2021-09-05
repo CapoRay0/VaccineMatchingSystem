@@ -169,7 +169,7 @@ namespace DataFormatTransfer
         {
             string connectionString = DBHelper.GetConnectionString();
             string dbCommandString =
-                $@"SELECT [FeedbackID]
+                $@"SELECT [FeedbackAccNote]
                         , [FName]
                         , [Email]
                         , [Reason]

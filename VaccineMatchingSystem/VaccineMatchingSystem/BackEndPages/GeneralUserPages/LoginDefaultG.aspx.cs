@@ -33,11 +33,11 @@ namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
 
                 if (CurrentUser.Gender == 1)
                 {
-                    this.ltlTitleShow.Text = $"{CurrentUser.Name}先生，歡迎使用疫苗配對系統";
+                    this.ltlTitleShow.Text = $"{CurrentUser.Name}先生<br />歡迎使用疫苗配對系統";
                 }
                 else if (CurrentUser.Gender == 2)
                 {
-                    this.ltlTitleShow.Text = $"{CurrentUser.Name}小姐，歡迎使用疫苗配對系統";
+                    this.ltlTitleShow.Text = $"{CurrentUser.Name}小姐<br />歡迎使用疫苗配對系統";
                 }
             }
         }

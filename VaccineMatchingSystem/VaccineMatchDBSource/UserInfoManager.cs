@@ -301,9 +301,11 @@ namespace VaccineMatchDBSource
                 return false;
             }
         }
+
+
         public static bool CheckDataRowIsNull(DataRow dataRow)
         {
-            if (dataRow != null)
+            if (dataRow == null)
             {
                 return true;
             }

@@ -15,9 +15,17 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+
+        <div class="col-md-4">
+        </div>
+
+        <div  class="container col-md-4">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <!--這裡放主要內容-->
             </asp:ContentPlaceHolder>
+        </div>
+
+        <div class="col-md-4">
         </div>
     </form>
 </body>

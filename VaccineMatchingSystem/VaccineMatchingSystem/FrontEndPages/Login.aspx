@@ -8,19 +8,18 @@
     </script>
 
     <div>
-        <asp:Label ID="lblAccount" runat="server" Text="帳號"></asp:Label> &nbsp &nbsp &nbsp
-        <asp:TextBox ID="txtAccount" runat="server"></asp:TextBox><br />
-        <asp:Label ID="lblPWD" runat="server" Text="密碼"></asp:Label> &nbsp &nbsp &nbsp
-        <asp:TextBox ID="txtPWD" runat="server" TextMode="Password"></asp:TextBox><br />
-        <asp:Literal ID="ltlMsg" runat="server"></asp:Literal><br />
-        <asp:Label ID="lblVerification" runat="server" Text="驗證碼"></asp:Label>
-        <asp:Label ID="lblCode" runat="server" Text="驗證碼"></asp:Label>
-        <img src="DrawingVerification.ashx" />
-        <asp:TextBox ID="txtConfirmCode" runat="server"></asp:TextBox>
+        <asp:Label CssClass="col-form-label-lg" ID="lblAccount" runat="server" Text="帳號："></asp:Label><br />
+        <asp:TextBox CssClass="form-control" ID="txtAccount" runat="server" placeholder="在此輸入您的帳號"></asp:TextBox><br />
+        <asp:Label CssClass="col-form-label-lg" ID="lblPWD" runat="server" Text="密碼："></asp:Label><br />
+        <asp:TextBox CssClass="form-control" ID="txtPWD" runat="server" TextMode="Password" placeholder="在此輸入您的密碼"></asp:TextBox><br />
+        <asp:Label CssClass="col-form-label-lg align-bottom" ID="lblVerification" runat="server" Text="驗證碼："></asp:Label>
+        <img class="m-1" src="DrawingVerification.ashx" /><br />
+        <asp:TextBox CssClass="form-control" ID="txtConfirmCode" runat="server" placeholder="在此輸入驗證碼"></asp:TextBox><br />
     </div>
 
     <div>
-        <asp:Button ID="btnLogin" runat="server" Text="登入系統" OnClick="btnLogin_Click"/><br />
-        <asp:Button ID="btnForgetPWD" runat="server" Text="忘記密碼" OnClick="btnForgetPWD_Click"/>
+        <asp:Button CssClass="btn btn-outline-success btn-lg" ID="btnLogin" runat="server" Text="   登入系統   " OnClick="btnLogin_Click"/> &nbsp &nbsp &nbsp
+        <asp:Button CssClass="btn btn-outline-danger" ID="btnForgetPWD" runat="server" Text="忘記密碼" OnClick="btnForgetPWD_Click"/><br /><br />
+        <asp:Label CssClass="col-form-label-lg" ID="lblMsg" runat="server" Text=""></asp:Label>
     </div>
 </asp:Content>

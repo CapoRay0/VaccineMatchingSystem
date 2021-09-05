@@ -13,12 +13,9 @@ namespace VaccineMatchingSystem.FrontEndPages
     /// </summary>
     public class DrawingVerification : IHttpHandler, IRequiresSessionState
     {
-        //public string outputText { get; set; }
-
         public void ProcessRequest(HttpContext context)
         {
             var ms = this.DrawTransform();
-
             context.Response.ContentType = "image/png";
             context.Response.Clear();
             context.Response.BinaryWrite(ms.GetBuffer()); //透過GetBuffer把Stream裡面的位元組都取出
@@ -51,10 +48,8 @@ namespace VaccineMatchingSystem.FrontEndPages
             float tension = 100f;
             graphics.DrawCurve(pen1, points, tension);
 
-
             string outputText = RandomCode(5);
             HttpContext.Current.Session["Verify"] = outputText;
-
 
             string fontFamilyName = "Consolas"; // 字體
             Font font = new Font(new FontFamily(fontFamilyName), 20);
@@ -90,11 +85,8 @@ namespace VaccineMatchingSystem.FrontEndPages
             {
                 if (avoidSame != -1)
                 {
-                    //unchecked 關鍵字用於取消整型算術運算和轉換的溢位檢查。
-                    //DataTime.Ticks 屬性獲取表示此例項的日期和時間的刻度數。
                     random = new Random(i * avoidSame * unchecked((int)DateTime.Now.Ticks));
                 }
-                //Random.Next 方法返回一個小於所指定最大值的非負數隨機數。
                 int num = random.Next(55);
                 if (avoidSame != -1 && avoidSame == num)
                 {
@@ -103,7 +95,7 @@ namespace VaccineMatchingSystem.FrontEndPages
                 avoidSame = num;
                 rNumber += rArray[num];
             }
-            return rNumber;//返回生成的隨機數
+            return rNumber;
         }
     }
 }

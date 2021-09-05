@@ -36,15 +36,14 @@ namespace VaccineMatchingSystem.FrontEndPages
             string msg;
             if (!AuthManager.TryLogin(inp_Account, inp_PWD, out msg))
             {
-                this.ltlMsg.Text = msg;
+                this.lblMsg.Text = msg;
                 return;
             }
             else
             {
                 if (this.txtConfirmCode.Text.Trim() != Session["Verify"].ToString())
                 {
-                    this.ClientScript.RegisterStartupScript
-                        (this.GetType(), "", "<script>alert('驗證碼不正確')</script>");
+                    this.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('驗證碼不正確')</script>");
                     return;
                 }
                 else
