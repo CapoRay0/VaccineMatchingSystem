@@ -4,7 +4,7 @@
 
 <html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -15,11 +15,42 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <br />
+        <div class="container">
+            <table>
+                <tr>
+                    <td>
+                        <h1>
+                            <img src="../MasterPages/Pics/icon.png" width="50" height="50" />
+                            <asp:Label ID="Label1" runat="server">疫苗登記配對系統</asp:Label>
+                        </h1>
+                        <p>Resize this responsive page!</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+
+            
+            <img src="../MasterPages/Pics/website menu.png" width="30" height="30" />
+            <a href="https://www.cdc.gov.tw/" target="_blank">衛生福利部 / </a>
+            <a href="https://www.cdc.gov.tw/EpidemicTheme/List/AVUZAEYB4qppX9rji4SqpQ" target="_blank">國內外疫情焦點 / </a>
+            <a href="https://zh.wikipedia.org/wiki/小黄鸭调试法" target="_blank">關於黃色小鴨</a>
+
+        </div>
+
+
+
+
 
         <div class="col-md-4">
         </div>
 
-        <div  class="container col-md-4">
+        <div class="container col-md-4">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 <!--這裡放主要內容-->
             </asp:ContentPlaceHolder>
@@ -27,6 +58,22 @@
 
         <div class="col-md-4">
         </div>
+
+
+
+
+
+        <div>
+            <h4>
+                <asp:Label runat="server" ID="roomname">7302 黃色小鴨戰隊</asp:Label><br />
+                <asp:Label ID="copywrite" runat="server">Copyright © [2021] [Yellow Duck]. 2021.08.05</asp:Label>
+            </h4>
+
+            <img src="../MasterPages/Pics/icon.jfif" style="height: 63px; width: 60px" id="icon" class="justify-content-end" />
+
+        </div>
+
+
     </form>
 </body>
 </html>

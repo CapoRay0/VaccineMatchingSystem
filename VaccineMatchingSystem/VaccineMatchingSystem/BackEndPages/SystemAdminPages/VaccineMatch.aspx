@@ -3,6 +3,22 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <div>
+        <h3>進行新一輪的疫苗批次配對</h3>
+        <asp:Label ID="lblVaccShow" runat="server" Text=""></asp:Label><br />
+        <asp:Button ID="btnGetVaccData" runat="server" Text="取得本批次疫苗資料" OnClick="btnGetVaccData_Click" />
+        <asp:Repeater ID="RepeaterShowVacc" runat="server">
+            <ItemTemplate>
+                <div> 
+                    <h4>疫苗批次：<%# "批次：第" + Eval("VBatch") + "批" %></h4>
+                    <h4>性別：<%# "疫苗名：" + Eval("VName") %></h4>
+                    <h4>職業：<%# "疫苗數量：" + Eval("Quantity") %></h4>
+                </div>
+            </ItemTemplate>
+        </asp:Repeater>
+    </div>
+
     <div>
         <asp:Label ID="Label5" runat="server" Text="====================="></asp:Label><br />
         <asp:Literal ID="Literal2" runat="server">[演算法參數]</asp:Literal><br />

@@ -25,32 +25,16 @@ namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
             Guid CurrentUserGuid = CurrentUser.UserID;
 
 
-
             if (CurrentUser.Gender == 1)
             {
-                this.ltlTitleShow.Text = $"{CurrentUser.Name}先生，歡迎使用疫苗配對系統";
+                this.lblTitleShow.Text = $"{CurrentUser.Name}先生您好";
             }
             else if (CurrentUser.Gender == 2)
             {
-                this.ltlTitleShow.Text = $"{CurrentUser.Name}小姐，歡迎使用疫苗配對系統";
+                this.lblTitleShow.Text = $"{CurrentUser.Name}小姐您好";
             }
 
 
-        }
-
-        protected void LinkVaccAZ_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("https://www.cdc.gov.tw/Category/MPage/epjWGimoqASwhAN8X-5Nlw");
-        }
-
-        protected void LinkVaccMoz_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("https://www.cdc.gov.tw/Category/MPage/epjWGimoqASwhAN8X-5Nlw");
-        }
-
-        protected void LinkVaccBNT_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("https://www.cdc.gov.tw/Category/MPage/epjWGimoqASwhAN8X-5Nlw");
         }
 
         protected void btnConfirm_Click(object sender, EventArgs e)
@@ -58,12 +42,6 @@ namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
             var CurrentUser = AuthManager.GetCurrentUser();
             Guid CurrentUserGuid = CurrentUser.UserID;
 
-            //List<string> VaccineYesRecord = new List<string>();
-
-            //if 
-            //{
-            //    //this.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('本批次已完成登記')</script>");
-            //}
             if (!CheckBoxVaccAZ.Checked && !CheckBoxVaccMoz.Checked && !CheckBoxVaccBNT.Checked)
                 this.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('請點選願意施打的疫苗')</script>");
 
@@ -90,7 +68,6 @@ namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
                 this.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('本批次已完成登記')</script>");
             }
 
-            //Response.Redirect("LoginDefaultG.aspx");
         }
 
         protected void btnReject_Click(object sender, EventArgs e)

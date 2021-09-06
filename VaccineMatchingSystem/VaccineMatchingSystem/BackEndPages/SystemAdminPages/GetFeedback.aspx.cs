@@ -33,7 +33,7 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         {
             DataTable dt = ExcelDataManager.GetUserFeedback();
 
-            string outputPath = "C:\\TryExcelintoC#\\使用者回饋報表.xlsx";
+            string outputPath = "C:\\VaccineExcel\\使用者回饋報表.xlsx";
 
             if (ExcelDataManager.DataTableToExcel(dt, outputPath))
             {
@@ -43,7 +43,58 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
             {
                 this.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('報表轉換失敗!')</script>");
             }
-            Response.Redirect("LoginDefaultS.aspx");
+        }
+
+        protected void GridViewFeedback_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            var row = e.Row;
+
+            if (row.RowType == DataControlRowType.DataRow)
+            {
+                Label lbl = row.FindControl("lblReasob") as Label;
+
+                var dr = row.DataItem as DataRowView;
+                int UserReason = dr.Row.Field<int>("Reason");
+
+                switch (UserReason)
+                {
+                    case 0:
+                        lbl.Text = "系統設計不友善";
+                        break;
+                    case 1:
+                        lbl.Text = "疫苗種類過少";
+                        break;
+                    case 2:
+                        lbl.Text = "基本資料有誤";
+                        break;
+                    case 3:
+                        lbl.Text = "不知道如何使用系統";
+                        break;
+                    case 4:
+                        lbl.Text = "其他原因";
+                        break;
+                }
+
+                if (row.RowType == DataControlRowType.DataRow)
+                {
+                    Label lbl1 = row.FindControl("lblGetFeedbackorNot") as Label;
+
+                    var dr1 = row.DataItem as DataRowView;
+                    int UserFeedbackGet = dr1.Row.Field<int>("FeedbackGet");
+
+                    switch (UserFeedbackGet)
+                    {
+                        case 0:
+                            lbl1.Text = "願意收到";
+
+                            break;
+                        case 1:
+                            lbl1.Text = "不願收到";
+                            break;
+
+                    }
+                }
+            }
         }
     }
 }

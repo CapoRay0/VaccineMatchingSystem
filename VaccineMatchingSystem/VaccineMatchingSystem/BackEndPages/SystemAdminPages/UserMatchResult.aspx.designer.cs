@@ -24,6 +24,24 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         protected global::System.Web.UI.WebControls.GridView GridViewMatchResult;
 
         /// <summary>
+        /// btnCalculateScore 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCalculateScore;
+
+        /// <summary>
+        /// litShowScore 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litShowScore;
+
+        /// <summary>
         /// btnVaccineMatch 控制項。
         /// </summary>
         /// <remarks>

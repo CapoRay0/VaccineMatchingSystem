@@ -109,7 +109,7 @@ namespace VaccineMatchingSystem.FrontEndPages
             string inp_Account = this.txtAccount.Text;
             string inp_PWD = this.txtOrigPWD.Text;
 
-            if (UserInfoManager.CheckInfoIsCorrectForChangPWD(inp_Account, inp_PWD))
+            if (!UserInfoManager.CheckInfoIsCorrectForChangPWD(inp_Account, inp_PWD))
             {
                 msgList.Add("請確認帳號及密碼是否正確");
                 errorMsgList = msgList;

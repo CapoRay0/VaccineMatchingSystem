@@ -4,11 +4,11 @@
 
 <html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    
+
     <link href="../ExternalTools/css/bootstrap.css" rel="stylesheet" />
     <script src="../ExternalTools/js/bootstrap.js"></script>
 
@@ -16,16 +16,16 @@
 <body>
     <form id="form1" runat="server">
 
-        <div class="col-md-4">
+        <div class="col-md-3">
         </div>
 
-        <div  class="container col-md-4">
+        <div class="container col-md-6">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 <!--這裡放主要內容-->
             </asp:ContentPlaceHolder>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-3">
         </div>
     </form>
 </body>

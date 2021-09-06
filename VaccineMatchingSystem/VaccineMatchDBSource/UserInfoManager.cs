@@ -44,6 +44,40 @@ namespace VaccineMatchDBSource
             }
         }
 
+        public static DataRow GetUserInfoByGuid(Guid userGuid)
+        {
+            string connectionString = DBHelper.GetConnectionString();
+            string dbCommandString =
+                $@"SELECT [UserID]
+                        , [Name]
+                        , [Gender]
+                        , [Age]
+                        , [Occupation]
+                        , [Area]
+                        , [UserLevel]
+                        , [ID]
+                        , [Account]
+                        , [Password]
+                        , [Status]
+                        , [DoseCount]
+                    FROM [UserInfo]
+                    WHERE [UserID] = @userGuid
+                ";
+
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@userGuid", userGuid));
+
+            try
+            {
+                return DBHelper.ReadDataRow(connectionString, dbCommandString, list);
+            }
+            catch (Exception ex)
+            {
+                logger.WriteLog(ex);
+                return null;
+            }
+        }
+
         public static int GetAccountUserLevel(string account)
         {
             string connectionString = DBHelper.GetConnectionString();
@@ -159,7 +193,70 @@ namespace VaccineMatchDBSource
             }
         }
 
+        public static DataTable GetGeneralUserInfo()
+        {
+            string connectionString = DBHelper.GetConnectionString();
+            string dbCommandString =
+                $@"SELECT [UserID]
+                        , [Name]
+                        , [Gender]
+                        , [Age]
+                        , [Occupation]
+                        , [Area]
+                        , [UserLevel]
+                        , [ID]
+                        , [Account]
+                        , [Password]
+                        , [Status]
+                        , [DoseCount]
+                    FROM [UserInfo]
+                    WHERE [UserLevel] = 1
+                ";
 
+            List<SqlParameter> list = new List<SqlParameter>();
+
+            try
+            {
+                return DBHelper.ReadDataTable(connectionString, dbCommandString, list);
+            }
+            catch (Exception ex)
+            {
+                logger.WriteLog(ex);
+                return null;
+            }
+        }
+        public static DataRow GetUserInfoInDataRow()
+        {
+            string connectionString = DBHelper.GetConnectionString();
+            string dbCommandString =
+                $@"SELECT [UserID]
+                        , [Name]
+                        , [Gender]
+                        , [Age]
+                        , [Occupation]
+                        , [Area]
+                        , [UserLevel]
+                        , [ID]
+                        , [Account]
+                        , [Password]
+                        , [Status]
+                        , [DoseCount]
+                    FROM [UserInfo]
+                    WHERE [UserLevel] = 1
+                ";
+
+            List<SqlParameter> list = new List<SqlParameter>();
+
+            try
+            {
+                return DBHelper.ReadDataRow(connectionString, dbCommandString, list);
+            }
+            catch (Exception ex)
+            {
+                logger.WriteLog(ex);
+                return null;
+            }
+        }
         public static string GetGeneralUserCount()
         {
             string connectionString = DBHelper.GetConnectionString();
@@ -245,7 +342,7 @@ namespace VaccineMatchDBSource
             {
                 var dr = DBHelper.ReadDataRow(connStr, dbCommand, paramList);
 
-                if (CheckDataRowIsNull(dr))
+                if (!CheckDataRowIsNull(dr))
                 {
                     var OrigAccount = dr[0].ToString();
                     var OrigPWD = dr[1].ToString();
@@ -272,7 +369,7 @@ namespace VaccineMatchDBSource
                         [Name]
                         ,[ID]
                     FROM [UserInfo]
-                    WHERE Name = @name AND ID = @id";
+                    WHERE [Name] = @name AND ID = @id";
 
             List<SqlParameter> paramList = new List<SqlParameter>();
             paramList.Add(new SqlParameter("@name", Name));
@@ -282,7 +379,7 @@ namespace VaccineMatchDBSource
             {
                 var dr = DBHelper.ReadDataRow(connStr, dbCommand, paramList);
 
-                if (CheckDataRowIsNull(dr))
+                if (!CheckDataRowIsNull(dr))
                 {
                     var OrigName = dr[0].ToString();
                     var OrigID = dr[1].ToString();
@@ -301,8 +398,6 @@ namespace VaccineMatchDBSource
                 return false;
             }
         }
-
-
         public static bool CheckDataRowIsNull(DataRow dataRow)
         {
             if (dataRow == null)

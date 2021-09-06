@@ -39,7 +39,6 @@ namespace VaccineMatchDBSource
             }
         }
 
-
         public static void InsertUserWillingVaccin(Guid userGuid, string WillingRecord)
         {
             string connStr = DBHelper.GetConnectionString();

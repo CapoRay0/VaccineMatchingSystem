@@ -15,13 +15,22 @@ namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
     {
 
         /// <summary>
-        /// ltlTitleShow 控制項。
+        /// lblTitleShow 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltlTitleShow;
+        protected global::System.Web.UI.WebControls.Label lblTitleShow;
+
+        /// <summary>
+        /// lblWelcome 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblWelcome;
 
         /// <summary>
         /// lblVaccAZ 控制項。
@@ -42,15 +51,6 @@ namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
         protected global::System.Web.UI.WebControls.CheckBox CheckBoxVaccAZ;
 
         /// <summary>
-        /// LinkVaccAZ 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkVaccAZ;
-
-        /// <summary>
         /// lblVaccMoz 控制項。
         /// </summary>
         /// <remarks>
@@ -69,15 +69,6 @@ namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
         protected global::System.Web.UI.WebControls.CheckBox CheckBoxVaccMoz;
 
         /// <summary>
-        /// LinkVaccMoz 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkVaccMoz;
-
-        /// <summary>
         /// lblVaccBNT 控制項。
         /// </summary>
         /// <remarks>
@@ -94,15 +85,6 @@ namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox CheckBoxVaccBNT;
-
-        /// <summary>
-        /// LinkVaccBNT 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkVaccBNT;
 
         /// <summary>
         /// btnConfirm 控制項。

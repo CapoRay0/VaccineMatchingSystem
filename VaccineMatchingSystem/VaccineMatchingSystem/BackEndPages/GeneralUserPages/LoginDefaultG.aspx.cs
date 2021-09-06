@@ -33,11 +33,11 @@ namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
 
                 if (CurrentUser.Gender == 1)
                 {
-                    this.ltlTitleShow.Text = $"{CurrentUser.Name}先生<br />歡迎使用疫苗配對系統";
+                    this.lblTitleShow.Text = $"{CurrentUser.Name}先生您好";
                 }
                 else if (CurrentUser.Gender == 2)
                 {
-                    this.ltlTitleShow.Text = $"{CurrentUser.Name}小姐<br />歡迎使用疫苗配對系統";
+                    this.lblTitleShow.Text = $"{CurrentUser.Name}小姐您好";
                 }
             }
         }
@@ -56,6 +56,11 @@ namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
         protected void btnNoDose_Click(object sender, EventArgs e)
         {
             Response.Redirect("UnWillingVaccination.aspx");
+        }
+
+        protected void btnQuery_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("VaccinationRecord.aspx");
         }
     }
 }

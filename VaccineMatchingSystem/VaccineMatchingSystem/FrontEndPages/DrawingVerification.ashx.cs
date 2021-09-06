@@ -48,7 +48,7 @@ namespace VaccineMatchingSystem.FrontEndPages
             float tension = 100f;
             graphics.DrawCurve(pen1, points, tension);
 
-            string outputText = RandomCode(5);
+            var outputText = RandomCode(5);
             HttpContext.Current.Session["Verify"] = outputText;
 
             string fontFamilyName = "Consolas"; // 字體

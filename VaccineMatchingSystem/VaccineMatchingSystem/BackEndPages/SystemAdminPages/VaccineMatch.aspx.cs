@@ -1,4 +1,5 @@
 ﻿using AlgorithmData;
+using DataFormatTransfer;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -95,7 +96,8 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
             {
                 userInfo.Age = Convert.ToInt32(Convert.ToInt32(drWillingUser.Rows[i]["Age"]));
                 userInfo.Job = drWillingUser.Rows[i]["Occupation"].ToString();
-                userInfo.Status = drWillingUser.Rows[i]["Status"].ToString();
+                string[] tempState = { drWillingUser.Rows[i]["Status"].ToString() };
+                userInfo.Status = tempState;
                 userInfo.Area = drWillingUser.Rows[i]["Area"].ToString();
                 userInfo.DoseCount = Convert.ToInt32(drWillingUser.Rows[i]["DoseCount"]) - 1;
                 result = AlgHelper.GetTotalScore(userInfo, algP);
@@ -105,6 +107,14 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
             //var result = AlgHelper.GetTotalScore(userInfo, algP);
             //ltShow.Text = result.ToString();
             #endregion
+        }
+
+        protected void btnGetVaccData_Click(object sender, EventArgs e)
+        {
+            DataTable ds = ExcelDataManager.GetCurrentVaccInfo();
+
+            this.RepeaterShowVacc.DataSource = ds;
+            this.RepeaterShowVacc.DataBind();
         }
     }
 }

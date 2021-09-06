@@ -105,7 +105,7 @@ namespace AlgorithmData
         public static double GetJobScore(string job, Dictionary<string, double> job_dict, int limit = 100)
         {
             //如果有對應到指定職業，則分數*權重
-            if (true == (job_dict.ContainsKey(job)))
+            if (true == job_dict.ContainsKey(job))
             {
                 double ans = job_dict[job] * limit;
                 return ans;
@@ -123,17 +123,19 @@ namespace AlgorithmData
         /// <param name="state">民眾特殊狀態</param>
         /// <param name="state_dict">特殊狀態權重表</param>
         /// <returns></returns>
-        public static double GetStateWeight(string state, Dictionary<string, double> state_dict)
+        public static double GetStateWeight(string[] state, Dictionary<string, double> state_dict)
         {
-            //如果有對應到指定狀態，則給出權重
-            if (true == (state_dict.ContainsKey(state)))
+            //如果有對應到指定狀態，則給出權重，重複者相乘
+            double ans = 1;
+            foreach (var item in state)
             {
-                return state_dict[state];
+                if (state_dict.ContainsKey(item))
+                {
+                    ans *= state_dict[item];
+                }
             }
-            else
-            {
-                return 1;
-            }
+
+            return ans;
         }
 
         /// <summary>

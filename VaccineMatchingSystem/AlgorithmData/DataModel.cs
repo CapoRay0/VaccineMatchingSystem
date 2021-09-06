@@ -22,7 +22,7 @@ namespace AlgorithmData
         //地區
         public string Area { get; set; }
         //狀態
-        public string Status { get; set; }
+        public string[] Status { get; set; }
         //打了第幾劑
         public int DoseCount { get; set; } = 0;
         //public Dictionary<string, bool> VaccineWilling { get; set; }

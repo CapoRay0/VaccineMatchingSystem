@@ -189,5 +189,135 @@ namespace DataFormatTransfer
                 return null;
             }
         }
+
+        public static DataTable GetCurrentVaccInfo()
+        {
+            string connStr = DBHelper.GetConnectionString();
+            string dbCommand =
+                $@" SELECT
+                        [VBatch],
+                        [VName],
+                        [Quantity]
+                    FROM [VaccineInventory]
+                    
+                ";
+            // 用List把Parameter裝起來，再裝到共用參數
+            List<SqlParameter> list = new List<SqlParameter>();
+            try // 讓錯誤可以被凸顯，因此 TryCatch 不應該重構進 DBHelper
+            {
+                return DBHelper.ReadDataTable(connStr, dbCommand, list);
+            }
+            catch (Exception ex)
+            {
+                logger.WriteLog(ex);
+                return null;
+            }
+        }
+
+
+        public static void InsertUserInfoIntoSQL(DataTable dt)
+        {
+            string connStr = DBHelper.GetConnectionString();
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                string dbCommand =
+                $@" INSERT INTO [dbo].[UserInfo]
+                (
+                    UserID
+                    ,Name
+                    ,Gender
+                    ,Age
+                    ,Occupation
+                    ,Area
+                    ,UserLevel
+                    ,ID
+                    ,Account
+                    ,Password
+                    ,Status
+                    ,DoseCount
+                    
+                )
+                    VALUES
+                (
+                    @UserID
+                    ,@Name
+                    ,@Gender
+                    ,@Age
+                    ,@Occupation
+                    ,@Area
+                    ,@UserLevel
+                    ,@ID
+                    ,@Account
+                    ,@Password
+                    ,@Status
+                    ,@DoseCount
+                ) ";
+                List<SqlParameter> paramList = new List<SqlParameter>();
+
+                paramList.Add(new SqlParameter("@UserID", dt.Rows[i]["UserID"]));
+                paramList.Add(new SqlParameter("@Name", dt.Rows[i]["Name"]));
+                paramList.Add(new SqlParameter("@Gender", dt.Rows[i]["Gender"]));
+                paramList.Add(new SqlParameter("@Age", dt.Rows[i]["Age"]));
+                paramList.Add(new SqlParameter("@Occupation", dt.Rows[i]["Occupation"]));
+                paramList.Add(new SqlParameter("@Area", dt.Rows[i]["Area"]));
+                paramList.Add(new SqlParameter("@UserLevel", dt.Rows[i]["UserLevel"]));
+                paramList.Add(new SqlParameter("@ID", dt.Rows[i]["ID"]));
+                paramList.Add(new SqlParameter("@Account", dt.Rows[i]["Account"]));
+                paramList.Add(new SqlParameter("@Password", dt.Rows[i]["Password"]));
+                paramList.Add(new SqlParameter("@Status", dt.Rows[i]["Status"]));
+                paramList.Add(new SqlParameter("@DoseCount", dt.Rows[i]["DoseCount"]));
+
+
+                try
+                {
+                    DBHelper.CreatData(connStr, dbCommand, paramList);
+                }
+                catch (Exception ex)
+                {
+                    logger.WriteLog(ex);
+                }
+            }
+        }
+
+        public static void InsertVaccQuantityIntoSQL(DataTable dt)
+        {
+            string connStr = DBHelper.GetConnectionString();
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                string dbCommand =
+                $@" INSERT INTO [dbo].[VaccineInventory]
+                (
+                    VGUID
+                    ,VName
+                    ,Quantity
+                    ,VBatch
+                )
+                    VALUES
+                (
+                    @VGUID
+                    ,@VName
+                    ,@Quantity
+                    ,@VBatch
+                ) ";
+                List<SqlParameter> paramList = new List<SqlParameter>();
+
+                paramList.Add(new SqlParameter("@VGUID", dt.Rows[i]["VGUID"]));
+                paramList.Add(new SqlParameter("@VName", dt.Rows[i]["VName"]));
+                paramList.Add(new SqlParameter("@Quantity", dt.Rows[i]["Quantity"]));
+                paramList.Add(new SqlParameter("@VBatch", dt.Rows[i]["VBatch"]));
+
+
+                try
+                {
+                    DBHelper.CreatData(connStr, dbCommand, paramList);
+                }
+                catch (Exception ex)
+                {
+                    logger.WriteLog(ex);
+                }
+            }
+        }
     }
 }

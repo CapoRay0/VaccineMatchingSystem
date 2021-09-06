@@ -122,7 +122,7 @@ namespace VaccineMatchDBSource
                    FROM [WillingRegister] AS W
                    LEFT JOIN[UserInfo] as U
                    ON W.UserID = U.UserID
-                   WHERE [VaccineWilling] = @vaccineName
+                   WHERE [VaccineWilling] = @vaccineName AND [IsEffective] = 1
                 ";
 
             List<SqlParameter> list = new List<SqlParameter>();
@@ -165,10 +165,8 @@ namespace VaccineMatchDBSource
             }
         }
 
+        
 
-
-
-        // 還沒寫
         public static void InsertIntoAlgorithm(int AlgID, Guid VGuid, int AgeButtom, int AgeTop, int Direction, string JobW, string StateW, string Area, int DoseCountRank)
         {
             string connStr = DBHelper.GetConnectionString();

@@ -11,7 +11,6 @@ namespace VaccineMatchAuth
 {
     public class AuthManager
     {
-
         #region 登入驗證
         /// <summary> 檢查目前是否登入 </summary>
         /// <returns></returns>
@@ -56,9 +55,6 @@ namespace VaccineMatchAuth
             return model;
         }
         #endregion
-
-
-
 
         #region 登入/登出
         /// <summary> 登入 </summary>
