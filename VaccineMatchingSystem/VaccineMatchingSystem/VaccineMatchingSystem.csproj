@@ -87,7 +87,6 @@
     <Content Include="FrontEndPages\Pics\login.png" />
     <Content Include="FrontEndPages\Pics\PWD.png" />
     <Content Include="Global.asax" />
-    <Content Include="MasterPages\Pics\bgimage.jpg" />
     <Content Include="MasterPages\Pics\icon.jfif" />
     <Content Include="MasterPages\Pics\icon.png" />
     <Content Include="MasterPages\Pics\website menu.png" />

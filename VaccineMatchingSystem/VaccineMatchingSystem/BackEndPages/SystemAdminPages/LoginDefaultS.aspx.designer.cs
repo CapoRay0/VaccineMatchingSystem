@@ -69,22 +69,31 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         protected global::System.Web.UI.WebControls.Literal ltlWillingNumb;
 
         /// <summary>
-        /// Button1 控制項。
+        /// fuUserInfoExcel 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.FileUpload fuUserInfoExcel;
 
         /// <summary>
-        /// Button2 控制項。
+        /// ltUserInfoUploadWarning 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Literal ltUserInfoUploadWarning;
+
+        /// <summary>
+        /// btnReadUserInfo 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnReadUserInfo;
 
         /// <summary>
         /// btnInsetUserInfo 控制項。
@@ -96,6 +105,42 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         protected global::System.Web.UI.WebControls.Button btnInsetUserInfo;
 
         /// <summary>
+        /// gvReadUserInfoFromExel 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvReadUserInfoFromExel;
+
+        /// <summary>
+        /// fuVaccQuinExcel 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fuVaccQuinExcel;
+
+        /// <summary>
+        /// ltVaccQuinUploadWarning 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltVaccQuinUploadWarning;
+
+        /// <summary>
+        /// btnReadVaccInfoThisBatch 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnReadVaccInfoThisBatch;
+
+        /// <summary>
         /// btnInsertVaccQuin 控制項。
         /// </summary>
         /// <remarks>
@@ -103,6 +148,15 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnInsertVaccQuin;
+
+        /// <summary>
+        /// rpReadVaccQuinFromExcel 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rpReadVaccQuinFromExcel;
 
         /// <summary>
         /// btnGetUserInfo 控制項。
@@ -123,13 +177,13 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         protected global::System.Web.UI.WebControls.GridView GridUserInfo;
 
         /// <summary>
-        /// Button3 控制項。
+        /// btnGetVaccData 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
+        protected global::System.Web.UI.WebControls.Button btnGetVaccData;
 
         /// <summary>
         /// RepeaterShowVacc 控制項。
@@ -139,15 +193,6 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater RepeaterShowVacc;
-
-        /// <summary>
-        /// btnGetVaccData 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGetVaccData;
 
         /// <summary>
         /// GridViewVaccInv 控制項。
