@@ -9,6 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using VaccineMatchDBSource;
 
 namespace DataFormatTransfer
@@ -16,9 +17,15 @@ namespace DataFormatTransfer
     public class ExcelDataManager
     {
         /// <summary>
+        /// 僅允許上傳excel
+        /// </summary>
+        private static string[] allowExt = { ".XLS", ".XLSX", ".xls", ".xlsx" };
+
+
+        /// <summary>
         /// Excel轉換為DataTable
         /// </summary>
-        /// <param name="filePath"></param>
+        /// <param name="filePath">路徑</param>
         /// <returns></returns>
         public static DataTable GetDataTableFromExcelFile(string filePath)
         {
@@ -169,7 +176,7 @@ namespace DataFormatTransfer
         {
             string connectionString = DBHelper.GetConnectionString();
             string dbCommandString =
-                $@"SELECT [FeedbackAccNote]
+                $@"SELECT [FeedbackID]
                         , [FName]
                         , [Email]
                         , [Reason]
@@ -319,5 +326,114 @@ namespace DataFormatTransfer
                 }
             }
         }
+
+        /// <summary>
+        /// 回傳指定路徑上n層的絕對路徑
+        /// </summary>
+        /// <param name="path">指定路徑</param>
+        /// <param name="upLevel">上n層</param>
+        /// <returns></returns>
+        public static string GetUpLevelDirectory(string path, int upLevel)
+        {
+            var directory = File.GetAttributes(path).HasFlag(FileAttributes.Directory)
+                ? path
+                : Path.GetDirectoryName(path);
+
+            upLevel = upLevel < 0 ? 0 : upLevel;
+
+            for (var i = 0; i < upLevel; i++)
+            {
+                directory = Path.GetDirectoryName(directory);
+            }
+
+            return directory;
+        }
+
+        /// <summary>
+        /// 上傳excel檔案
+        /// </summary>
+        /// <param name="fileUpload"></param>
+        /// <param name="literal"></param>
+        public static string UploadExcel(FileUpload fileUpload, string FilePathForSaving, string FileTitle)
+        {
+            if (fileUpload.HasFile)
+            {
+                string orgFileName = fileUpload.FileName;
+                //解決重名問題1
+                System.Threading.Thread.Sleep(6);
+                //解決重名問題2
+                string randNum = new Random((int)DateTime.Now.Ticks).
+                    Next(0, 1000000).ToString().PadLeft(3, '0')
+                    + "_";
+
+
+                //製造檔名
+                string newFileName = FileTitle + "_" + randNum + DateTime.Now.ToString("_yyMMdd_HHmmss_ffffff");
+
+                //抓取副檔名
+                string ext = Path.GetExtension(orgFileName);
+                if (IsAllowedExt(ext, allowExt) == false)
+                {
+                    return "only allowed ext";
+                }
+
+
+
+                //擋住太大的檔案
+                //if (MaxMB(fileUpload.FileBytes.Length, 10) == false)
+                //{
+                //    literal.Text = $"Too big ";
+                //    return;
+                //}
+
+                //路徑             
+                string path = Path.Combine
+                    (FilePathForSaving, newFileName + ext);
+
+                fileUpload.SaveAs(path);
+
+
+                return newFileName + ext;
+
+            }
+            else
+            {
+                return "No FILE";
+            }
+
+
+        }
+
+        /// <summary>
+        /// 驗證檔案大小
+        /// </summary>
+        /// <param name="fileLen"></param>
+        /// <param name="maxMB"></param>
+        /// <returns></returns>
+        private bool MaxMB(int fileLen, int maxMB)
+        {
+            int maxLenth = maxMB * 1024 * 1024;
+            if (fileLen >= maxLenth)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// 抓取副檔名之工具
+        /// </summary>
+        /// <param name="ext"></param>
+        /// <param name="allowExt"></param>
+        /// <returns></returns>
+        private static bool IsAllowedExt(string ext, string[] allowExt)
+        {
+            if (allowExt.Contains(ext.ToLower()))
+            {
+                return true;
+            }
+            return false;
+        }
+
     }
 }
