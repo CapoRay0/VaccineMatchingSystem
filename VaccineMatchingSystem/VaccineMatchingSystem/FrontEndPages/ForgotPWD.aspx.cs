@@ -86,7 +86,7 @@ namespace VaccineMatchingSystem.FrontEndPages
             
             if (!UserInfoManager.CheckInfoIsCorrectForForgotPWD(inp_Name, inp_ID))
             {
-                msgList.Add("請確認姓名及身分證是否正確");
+                msgList.Add("請確認姓名及身分是否正確");
                 errorMsgList = msgList;
                 return false;
             }
@@ -99,6 +99,11 @@ namespace VaccineMatchingSystem.FrontEndPages
                 return true;
             else
                 return false;
+        }
+
+        protected void btnBackToLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
         }
     }
 }

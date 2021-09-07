@@ -13,7 +13,7 @@ namespace VaccineMatchingSystem.FrontEndPages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
             if (!Page.IsPostBack)//判斷頁面是不是第一次顯示
             {
                 //this.lblCode.Text = RandomCode(5);
@@ -44,6 +44,13 @@ namespace VaccineMatchingSystem.FrontEndPages
             string inp_PWD = this.txtPWD.Text;
             string msg;
 
+            //驗證是否為登入失敗，如果失敗回傳false
+            if (!AuthManager.TryLogin(inp_Account, inp_PWD, out msg))
+            {
+                this.lblMsg.Text = msg;
+                return;
+            }
+
             //驗證驗證碼
             #region 開發時隱藏
 
@@ -55,17 +62,11 @@ namespace VaccineMatchingSystem.FrontEndPages
 
             #endregion
 
+
             //如果帳號=密碼就是第一次登入，導向到更改密碼頁
             if (inp_Account == inp_PWD)
             {
                 Response.Redirect("ChangePWD.aspx");
-            }
-
-            //驗證是否為登入失敗，如果失敗回傳false
-            if (!AuthManager.TryLogin(inp_Account, inp_PWD, out msg))
-            {
-                this.lblMsg.Text = msg;
-                return;
             }
 
             //如果閒置10分鐘則強制登出

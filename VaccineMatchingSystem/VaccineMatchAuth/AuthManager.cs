@@ -67,7 +67,7 @@ namespace VaccineMatchAuth
             // check empty
             if (string.IsNullOrWhiteSpace(account) || string.IsNullOrWhiteSpace(pwd))
             {
-                errorMsg = "請輸入帳號 / 密碼";
+                errorMsg = "請輸入帳號密碼";
                 return false;
             }
 
@@ -78,7 +78,7 @@ namespace VaccineMatchAuth
             //check null
             if (dr == null)
             {
-                errorMsg = $"帳號： {account} 並不存在"; // 查不到的話
+                errorMsg = $"此帳號並不存在"; // 查不到的話
                 return false;
             }
 
@@ -92,7 +92,7 @@ namespace VaccineMatchAuth
             }
             else
             {
-                errorMsg = "登入失敗，請檢查密碼是否正確";
+                errorMsg = "請檢查密碼是否正確";
                 return false;
             }
 

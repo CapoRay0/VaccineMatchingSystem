@@ -12,9 +12,53 @@
     <link href="../ExternalTools/css/bootstrap.css" rel="stylesheet" />
     <script src="../ExternalTools/js/bootstrap.js"></script>
 
+    <style>
+    </style>
+
 </head>
 <body>
     <form id="form1" runat="server">
+
+
+        <div class="container">
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#">
+                    <img src="../MasterPages/Pics/system.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                    BBBBBBBB
+                </a>
+            </nav>
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Navbar</a>
+            </nav>
+        </div>
+
+
+        <div class="container" style="height: 130px; background-color: rgb(240,240,240);">
+            <br />
+            <table>
+                <tr>
+
+                    <td width="30%" align="left">
+                        <h1>
+                            <asp:Label ID="Label1" runat="server">疫苗登記配對系統</asp:Label>
+                        </h1>
+                        <p>Please don't hesitate, vaccinate and you'll be great!</p>
+                    </td>
+
+                    <td width="40%" align="center"></td>
+
+                    <td width="30%" align="right">
+                        <a href="https://www.cdc.gov.tw/" target="_blank">衛生福利部 / </a>
+                        <a href="https://www.cdc.gov.tw/EpidemicTheme/List/AVUZAEYB4qppX9rji4SqpQ" target="_blank">國內外疫情焦點 / </a>
+                        <a href="https://zh.wikipedia.org/wiki/小黄鸭调试法" target="_blank">關於黃色小鴨</a>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+
+
 
         <div class="col-md-3">
         </div>
@@ -27,6 +71,35 @@
 
         <div class="col-md-3">
         </div>
+
+
+
+        <div class="container" style="height: 110px; background-color: rgb(240,240,240);">
+            <br />
+            <table>
+                <tr>
+
+                    <td width="30%" align="left"></td>
+
+                    <td width="40%" align="center">
+                        <h4>
+                            <asp:Label CssClass="align-bottom" ID="Label3" runat="server">Copyright © [2021] [Yellow Duck]</asp:Label>
+                        </h4>
+                    </td>
+
+                    <td></td>
+
+                    <td width="30%" align="right">
+
+                        <h4>
+                            <asp:Label runat="server" ID="Label2">7302 黃色小鴨集團</asp:Label>
+                        </h4>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+
     </form>
 </body>
 </html>

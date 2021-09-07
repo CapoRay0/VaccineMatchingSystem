@@ -6,7 +6,7 @@
     <script>
         document.body.oncopy = function () {event.returnValue = false}
     </script>
-
+    <br /><br />
     <div>
         <asp:Label CssClass="col-form-label-lg" ID="lblAccount" runat="server" Text="帳號："></asp:Label><br />
         <asp:TextBox CssClass="form-control" ID="txtAccount" runat="server" placeholder="在此輸入您的帳號"></asp:TextBox><br />
@@ -19,7 +19,8 @@
 
     <div>
         <asp:Button CssClass="btn btn-outline-success btn-lg" ID="btnLogin" runat="server" Text="   登入系統   " OnClick="btnLogin_Click"/> &nbsp &nbsp &nbsp
-        <asp:Button CssClass="btn btn-outline-danger" ID="btnForgetPWD" runat="server" Text="忘記密碼" OnClick="btnForgetPWD_Click"/><br /><br />
+        <asp:Button CssClass="btn btn-outline-danger" ID="btnForgetPWD" runat="server" Text="忘記密碼" OnClick="btnForgetPWD_Click"/> &nbsp &nbsp
         <asp:Label CssClass="col-form-label-lg" ID="lblMsg" runat="server" Text=""></asp:Label>
     </div>
+    <br /><br /><br /><br /><br />
 </asp:Content>

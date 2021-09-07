@@ -17,7 +17,7 @@ namespace DataFormatTransfer
     public class ExcelDataManager
     {
         /// <summary>
-        /// 僅允許上傳excel
+        /// 僅允許上傳的excel副檔名
         /// </summary>
         private static string[] allowExt = { ".XLS", ".XLSX", ".xls", ".xlsx" };
 
@@ -171,7 +171,6 @@ namespace DataFormatTransfer
             }
         }
 
-
         public static DataTable GetUserFeedback()
         {
             string connectionString = DBHelper.GetConnectionString();
@@ -221,7 +220,42 @@ namespace DataFormatTransfer
             }
         }
 
+        public static DataTable GetCurrentVaccInfoByVBatch(int VBatch)
+        {
+            string connStr = DBHelper.GetConnectionString();
+            string dbCommand =
+                $@" SELECT
+                        [VBatch],
+                        [VName],
+                        [Quantity]
+                    FROM [VaccineInventory]
+                    WHERE [VBatch]= @VBatch                    
+                ";
+            // 用List把Parameter裝起來，再裝到共用參數
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@VBatch", VBatch));
+            try // 讓錯誤可以被凸顯，因此 TryCatch 不應該重構進 DBHelper
+            {
+                return DBHelper.ReadDataTable(connStr, dbCommand, list);
+            }
+            catch (Exception ex)
+            {
+                logger.WriteLog(ex);
+                return null;
+            }
+        }
 
+        #region 將資料insert進db的
+        /// <summary>
+        ///  將資料insert進db的委派
+        /// </summary>
+        /// <param name="dt"></param>
+        public delegate void InsertDTIntoSQL(DataTable dt);  //委派
+
+        /// <summary>
+        /// 將使用者資料insert進db
+        /// </summary>
+        /// <param name="dt"></param>
         public static void InsertUserInfoIntoSQL(DataTable dt)
         {
             string connStr = DBHelper.GetConnectionString();
@@ -287,6 +321,10 @@ namespace DataFormatTransfer
             }
         }
 
+        /// <summary>
+        /// 將疫苗資料insert進db
+        /// </summary>
+        /// <param name="dt"></param>
         public static void InsertVaccQuantityIntoSQL(DataTable dt)
         {
             string connStr = DBHelper.GetConnectionString();
@@ -326,6 +364,7 @@ namespace DataFormatTransfer
                 }
             }
         }
+        #endregion
 
         /// <summary>
         /// 回傳指定路徑上n層的絕對路徑
@@ -365,20 +404,14 @@ namespace DataFormatTransfer
                 string randNum = new Random((int)DateTime.Now.Ticks).
                     Next(0, 1000000).ToString().PadLeft(3, '0')
                     + "_";
-
-
                 //製造檔名
                 string newFileName = FileTitle + "_" + randNum + DateTime.Now.ToString("_yyMMdd_HHmmss_ffffff");
-
                 //抓取副檔名
                 string ext = Path.GetExtension(orgFileName);
                 if (IsAllowedExt(ext, allowExt) == false)
                 {
                     return "only allowed ext";
                 }
-
-
-
                 //擋住太大的檔案
                 //if (MaxMB(fileUpload.FileBytes.Length, 10) == false)
                 //{
@@ -391,14 +424,12 @@ namespace DataFormatTransfer
                     (FilePathForSaving, newFileName + ext);
 
                 fileUpload.SaveAs(path);
-
-
                 return newFileName + ext;
 
             }
             else
             {
-                return "No FILE";
+                return null;
             }
 
 
@@ -434,6 +465,29 @@ namespace DataFormatTransfer
             }
             return false;
         }
+
+        /// <summary>
+        /// 將指定路徑上的Excel檔案insert進db
+        /// </summary>
+        /// <param name="filePath">檔案路徑</param>
+        /// <returns></returns>
+        public static bool InsertExcelToDb(string filePath, InsertDTIntoSQL insertDTIntoSQL)
+        {
+            try
+            {
+                DataTable dt = GetDataTableFromExcelFile(filePath);
+                var a = dt.Rows.Count;
+                insertDTIntoSQL.Invoke(dt);
+                //InsertUserInfoIntoSQL(dt);
+                return true;  //資料庫輸入成功
+            }
+            catch
+            {
+                //logger.WriteLog(ex);
+                return false;  //資料庫輸入失敗                
+            }
+        }
+
 
     }
 }

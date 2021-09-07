@@ -123,5 +123,10 @@ namespace VaccineMatchingSystem.FrontEndPages
             else
                 return false;
         }
+
+        protected void btnBackToLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 }
