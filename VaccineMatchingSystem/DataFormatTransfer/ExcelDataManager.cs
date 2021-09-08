@@ -338,6 +338,7 @@ namespace DataFormatTransfer
                     ,VName
                     ,Quantity
                     ,VBatch
+                    ,IsMatched
                 )
                     VALUES
                 (
@@ -345,6 +346,7 @@ namespace DataFormatTransfer
                     ,@VName
                     ,@Quantity
                     ,@VBatch
+                    ,0
                 ) ";
                 List<SqlParameter> paramList = new List<SqlParameter>();
 

@@ -42,12 +42,6 @@ namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
             }
         }
 
-        protected void btnSystemExit_Click(object sender, EventArgs e)
-        {
-            AuthManager.Logout();
-            Response.Redirect("/FrontEndPages/Default.aspx");
-        }
-
         protected void btnYesDoes_Click(object sender, EventArgs e)
         {
             Response.Redirect("WillingVaccination.aspx");

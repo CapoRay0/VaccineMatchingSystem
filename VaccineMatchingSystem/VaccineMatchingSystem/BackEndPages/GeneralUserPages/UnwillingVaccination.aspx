@@ -2,12 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+    <br /><br /><br />
     <div>
         <asp:Label class="col-form-label-lg" ID="lblName" runat="server" Text="姓名"></asp:Label>
         <asp:TextBox class="form-control" ID="txtName" runat="server" placeholder="請在此輸入您的姓名"></asp:TextBox><br />
         <asp:Label class="col-form-label-lg" ID="lblEmail" runat="server" Text="Email"></asp:Label>
-        <asp:TextBox class="form-control" ID="txtEmail" runat="server" placeholder="請在此輸入您的信箱"></asp:TextBox><br />
+        <asp:TextBox class="form-control" ID="txtEmail" runat="server" TextMode="Email" placeholder="請在此輸入您的信箱"></asp:TextBox><br />
 
         <asp:Label class="col-form-label-lg" ID="lblReaseon" runat="server" Text="請選取不願意施打的原因"></asp:Label>
        
@@ -25,10 +25,10 @@
         <hr />
         <asp:Label class="col-form-label-lg" ID="Label1" runat="server" Text="是否願意收到系統更新後的通知"></asp:Label>
         <asp:RadioButton class="form-control-lg" ID="RBYesFeedback" runat="server" GroupName="ConfirmFeedback" Text="是"/>
-        <asp:RadioButton class="form-control-lg" ID="RBNoFeedback" runat="server" GroupName="ConfirmFeedback" Text="否"/><br /><br />
+        <asp:RadioButton class="form-control-lg" ID="RBNoFeedback" runat="server" GroupName="ConfirmFeedback" Text="否"/><br />
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
         <asp:Button class="btn btn-outline-secondary" ID="btnClear" runat="server" Text="   重填   " OnClick="btnClear_Click"/> &nbsp &nbsp
         <asp:Button class="btn btn-outline-success" ID="btnSend" runat="server" Text="   送出   " OnClick="btnSend_Click"/>
-        </div>
+        </div><br />
     </div>
 </asp:Content>

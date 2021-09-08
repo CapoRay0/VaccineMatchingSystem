@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <br />
+    <br /><br /><br /><br />
     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
         <h2><asp:Label ID="lblTitleShow" runat="server" Text=""></asp:Label></h2>
     </div>
@@ -50,6 +50,6 @@
     &nbsp &nbsp &nbsp
         <asp:Button class="btn btn-outline-danger" ID="btnReject" runat="server" Text="取消登記" OnClick="btnReject_Click" />
     </div>
-
+    <br /><br /><br /><br />
 
 </asp:Content>

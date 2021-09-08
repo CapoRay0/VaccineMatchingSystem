@@ -11,9 +11,45 @@
 
     <link href="../ExternalTools/css/bootstrap.css" rel="stylesheet" />
     <script src="../ExternalTools/js/bootstrap.js"></script>
-
+    <script src="../ExternalTools/jquery-3.6.0.min.js"></script>
     <style>
+        divAnimate {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation-name: example;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes example {
+            0% {
+                
+                left: 100px;
+                top: 0px;
+            }
 
+            25% {
+                
+                left: 1370px;
+                top: 0px;
+            }
+            50% {
+                
+                left: 1370px;
+                top: 500px;
+            }
+            75% {
+                
+                left: 100px;
+                top: 500px;
+            }
+
+            100% {
+                
+                left: 100px;
+                top: 0px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -49,6 +85,9 @@
 
 
         <div class="col-md-4">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                <!--這裡放主要內容-->
+            </asp:ContentPlaceHolder>
         </div>
 
         <div class="container col-md-4">

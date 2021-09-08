@@ -80,10 +80,34 @@
     <Content Include="BackEndPages\SystemAdminPages\LoginDefaultS.aspx" />
     <Content Include="BackEndPages\SystemAdminPages\UserMatchResult.aspx" />
     <Content Include="BackEndPages\SystemAdminPages\VaccineMatch.aspx" />
+    <Content Include="ExternalTools\css\bootstrap-grid.css" />
+    <Content Include="ExternalTools\css\bootstrap-grid.min.css" />
+    <Content Include="ExternalTools\css\bootstrap-grid.rtl.css" />
+    <Content Include="ExternalTools\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="ExternalTools\css\bootstrap-reboot.css" />
+    <Content Include="ExternalTools\css\bootstrap-reboot.min.css" />
+    <Content Include="ExternalTools\css\bootstrap-reboot.rtl.css" />
+    <Content Include="ExternalTools\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="ExternalTools\css\bootstrap-utilities.css" />
+    <Content Include="ExternalTools\css\bootstrap-utilities.min.css" />
+    <Content Include="ExternalTools\css\bootstrap-utilities.rtl.css" />
+    <Content Include="ExternalTools\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="ExternalTools\css\bootstrap.css" />
+    <Content Include="ExternalTools\css\bootstrap.min.css" />
+    <Content Include="ExternalTools\css\bootstrap.rtl.css" />
+    <Content Include="ExternalTools\css\bootstrap.rtl.min.css" />
+    <Content Include="ExternalTools\jquery-3.6.0.min.js" />
+    <Content Include="ExternalTools\js\bootstrap.bundle.js" />
+    <Content Include="ExternalTools\js\bootstrap.bundle.min.js" />
+    <Content Include="ExternalTools\js\bootstrap.esm.js" />
+    <Content Include="ExternalTools\js\bootstrap.esm.min.js" />
+    <Content Include="ExternalTools\js\bootstrap.js" />
+    <Content Include="ExternalTools\js\bootstrap.min.js" />
     <Content Include="FrontEndPages\ChangePWD.aspx" />
     <Content Include="FrontEndPages\Default.aspx" />
     <Content Include="FrontEndPages\ForgotPWD.aspx" />
     <Content Include="FrontEndPages\Login.aspx" />
+    <Content Include="FrontEndPages\Pics\duck Animation.png" />
     <Content Include="FrontEndPages\Pics\login.png" />
     <Content Include="FrontEndPages\Pics\PWD.png" />
     <Content Include="Global.asax" />
@@ -211,6 +235,28 @@
     <Content Include="MasterPages\GeneralUser.Master" />
     <Content Include="MasterPages\SystemAdmin.Master" />
     <Content Include="FrontEndPages\DrawingVerification.ashx" />
+    <Content Include="ExternalTools\css\bootstrap-grid.css.map" />
+    <Content Include="ExternalTools\css\bootstrap-grid.min.css.map" />
+    <Content Include="ExternalTools\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="ExternalTools\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="ExternalTools\css\bootstrap-reboot.css.map" />
+    <Content Include="ExternalTools\css\bootstrap-reboot.min.css.map" />
+    <Content Include="ExternalTools\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="ExternalTools\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="ExternalTools\css\bootstrap-utilities.css.map" />
+    <Content Include="ExternalTools\css\bootstrap-utilities.min.css.map" />
+    <Content Include="ExternalTools\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="ExternalTools\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="ExternalTools\css\bootstrap.css.map" />
+    <Content Include="ExternalTools\css\bootstrap.min.css.map" />
+    <Content Include="ExternalTools\css\bootstrap.rtl.css.map" />
+    <Content Include="ExternalTools\css\bootstrap.rtl.min.css.map" />
+    <Content Include="ExternalTools\js\bootstrap.bundle.js.map" />
+    <Content Include="ExternalTools\js\bootstrap.bundle.min.js.map" />
+    <Content Include="ExternalTools\js\bootstrap.esm.js.map" />
+    <Content Include="ExternalTools\js\bootstrap.esm.min.js.map" />
+    <Content Include="ExternalTools\js\bootstrap.js.map" />
+    <Content Include="ExternalTools\js\bootstrap.min.js.map" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -221,7 +267,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="ExternalTools\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

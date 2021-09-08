@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <br />
+    <br /><br /><br /><br />
     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
         <h4>
             <asp:Label ID="lblShowTotalUserNumb" runat="server" Text="一般使用者總數："></asp:Label>
@@ -22,9 +22,10 @@
     <br />
 
 
-    <div>
-        <asp:FileUpload ID="fuUserInfoExcel" runat="server" />
+    <div class="container">
         <asp:Literal ID="ltUserInfoUploadWarning" runat="server"></asp:Literal><br />
+        <asp:FileUpload type="file" class="form-control" ID="fuUserInfoExcel" runat="server" /><br />
+
 
 
 
@@ -67,9 +68,10 @@
             <SortedDescendingCellStyle BackColor="#E9EBEF" />
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
-        <br />
-        <asp:FileUpload ID="fuVaccQuinExcel" runat="server" />
+        <br /><br /><br /><br /><br />
         <asp:Literal ID="ltVaccQuinUploadWarning" runat="server"></asp:Literal><br />
+        <asp:FileUpload type="file" class="form-control" ID="fuVaccQuinExcel" runat="server" /><br />
+
 
 
         <div class="d-grid gap-2 d-md-flex justify-content-md-center">
@@ -159,8 +161,7 @@
         <asp:Button class="btn btn-outline-dark btn-lg" ID="btnStartMatching" runat="server" Text="檢視配對" OnClick="btnStartMatching_Click" />
         &nbsp &nbsp &nbsp
         <asp:Button class="btn btn-outline-info btn-lg" ID="btnToFeedback" runat="server" Text="前往回饋頁" OnClick="btnToFeedback_Click" />
-        &nbsp &nbsp &nbsp
-        <asp:Button class="btn btn-outline-secondary" ID="btnSystemExit" runat="server" Text="離開系統" OnClick="btnSystemExit_Click" />
+
     </div>
     <br />
     <br />

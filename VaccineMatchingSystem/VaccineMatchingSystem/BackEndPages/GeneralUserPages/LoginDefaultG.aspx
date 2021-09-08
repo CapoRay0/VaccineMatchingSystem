@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <br />
+    <br /><br /><br /><br />
     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
         <h2><asp:Label ID="lblTitleShow" runat="server" Text=""></asp:Label></h2>
     </div>
@@ -24,12 +24,12 @@
             </ItemTemplate>
         </asp:Repeater>
     </div>
-    <hr />
+
+    <br /><hr /><br />
     
     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
         <asp:Button class="btn btn-outline-success btn-lg" ID="btnYesDoes" runat="server" Text="   願意施打   " OnClick="btnYesDoes_Click"/> &nbsp &nbsp &nbsp
         <asp:Button class="btn btn-outline-primary" ID="btnQuery" runat="server" Text="查詢配對狀態" OnClick="btnQuery_Click" /> &nbsp &nbsp &nbsp
-        <asp:Button class="btn btn-outline-danger" ID="btnNoDose" runat="server" Text="不願意施打" OnClick="btnNoDose_Click"/> &nbsp &nbsp &nbsp
-        <asp:Button class="btn btn-outline-secondary" ID="btnSystemExit" runat="server" Text="離開系統" OnClick="btnSystemExit_Click"/>
-    </div>
+        <asp:Button class="btn btn-outline-danger" ID="btnNoDose" runat="server" Text="我有問題" OnClick="btnNoDose_Click"/>
+    </div><br /><br /><br /><br />
 </asp:Content>

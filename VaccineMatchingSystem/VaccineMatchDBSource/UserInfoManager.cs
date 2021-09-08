@@ -140,7 +140,7 @@ namespace VaccineMatchDBSource
             string dbCommand =
                 $@" UPDATE [UserInfo]
                     SET [Password] = @Newpwd                    
-                    WHERE Name = @name AND ID = @ID" ;
+                    WHERE Name = @name AND ID = @ID";
 
             List<SqlParameter> paramList = new List<SqlParameter>();
             paramList.Add(new SqlParameter("@name", name));
@@ -162,7 +162,7 @@ namespace VaccineMatchDBSource
                 return false;
             }
         }
-        
+
         public static DataTable GetUserInfoFor(Guid UserID)
         {
             string connectionString = DBHelper.GetConnectionString();
@@ -342,7 +342,8 @@ namespace VaccineMatchDBSource
             {
                 var dr = DBHelper.ReadDataRow(connStr, dbCommand, paramList);
 
-                if (!CheckDataRowIsNull(dr))
+                //if (!CheckDataRowIsNull(dr))
+                if (dr != null)
                 {
                     var OrigAccount = dr[0].ToString();
                     var OrigPWD = dr[1].ToString();
@@ -379,7 +380,8 @@ namespace VaccineMatchDBSource
             {
                 var dr = DBHelper.ReadDataRow(connStr, dbCommand, paramList);
 
-                if (!CheckDataRowIsNull(dr))
+                //if (!CheckDataRowIsNull(dr))
+                if (dr != null)
                 {
                     var OrigName = dr[0].ToString();
                     var OrigID = dr[1].ToString();
@@ -398,13 +400,13 @@ namespace VaccineMatchDBSource
                 return false;
             }
         }
-        public static bool CheckDataRowIsNull(DataRow dataRow)
-        {
-            if (dataRow == null)
-            {
-                return true;
-            }
-            return false;
-        }
+        //public static bool CheckDataRowIsNull(DataRow dataRow)
+        //{
+        //    if (dataRow == null)
+        //    {
+        //        return true;
+        //    }
+        //    return false;
+        //}
     }
 }

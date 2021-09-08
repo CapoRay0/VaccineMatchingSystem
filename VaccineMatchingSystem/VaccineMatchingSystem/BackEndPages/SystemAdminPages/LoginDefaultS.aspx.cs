@@ -51,16 +51,6 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
             Response.Redirect("GetFeedback.aspx");
         }
 
-        /// <summary>
-        /// 登出
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        protected void btnSystemExit_Click(object sender, EventArgs e)
-        {
-            AuthManager.Logout();
-            Response.Redirect("/FrontEndPages/Default.aspx");
-        }
         #endregion
         #region  excel進db
         /// <summary>
@@ -99,7 +89,10 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
                 return;
             }
             if (InsertExcelToDb(path, Inserter))
+            {
                 literal.Text = "資料庫輸入成功";
+                this.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('資料庫輸入成功')</script>");
+            }
             else
                 literal.Text = "請檢查路徑或檔案的正確性";
             path = null;
@@ -194,9 +187,11 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
                 int UserGender = dr.Row.Field<int>("Gender");
                 switch (UserGender)
                 {
+                    case 0:
+                        lbl.Text = "其他";
+                        break;
                     case 1:
                         lbl.Text = "男性";
-
                         break;
                     case 2:
                         lbl.Text = "女性";

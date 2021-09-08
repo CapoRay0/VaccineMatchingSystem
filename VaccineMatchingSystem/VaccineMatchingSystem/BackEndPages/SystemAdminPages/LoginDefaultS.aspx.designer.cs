@@ -69,15 +69,6 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         protected global::System.Web.UI.WebControls.Literal ltlWillingNumb;
 
         /// <summary>
-        /// fuUserInfoExcel 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fuUserInfoExcel;
-
-        /// <summary>
         /// ltUserInfoUploadWarning 控制項。
         /// </summary>
         /// <remarks>
@@ -85,6 +76,15 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltUserInfoUploadWarning;
+
+        /// <summary>
+        /// fuUserInfoExcel 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fuUserInfoExcel;
 
         /// <summary>
         /// btnReadUserInfo 控制項。
@@ -114,15 +114,6 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         protected global::System.Web.UI.WebControls.GridView gvReadUserInfoFromExel;
 
         /// <summary>
-        /// fuVaccQuinExcel 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fuVaccQuinExcel;
-
-        /// <summary>
         /// ltVaccQuinUploadWarning 控制項。
         /// </summary>
         /// <remarks>
@@ -130,6 +121,15 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltVaccQuinUploadWarning;
+
+        /// <summary>
+        /// fuVaccQuinExcel 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fuVaccQuinExcel;
 
         /// <summary>
         /// btnReadVaccInfoThisBatch 控制項。
@@ -220,14 +220,5 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnToFeedback;
-
-        /// <summary>
-        /// btnSystemExit 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSystemExit;
     }
 }

@@ -3,12 +3,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <br />
+    <br /><br /><br /><br />
     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
         <h3>系統管理者 - 查詢使用者回饋</h3>
     </div><br />
     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-        <asp:Button class="btn btn-primary btn-lg" ID="RepeaterbtnGetFeedback" runat="server" Text="回饋查詢" Width="60%" OnClick="Button1_Click" />
+        <asp:Button class="btn btn-outline-primary btn-lg" ID="RepeaterbtnGetFeedback" runat="server" Text="回饋查詢" Width="60%" OnClick="Button1_Click" />
     </div>
         <br />
     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
@@ -43,7 +43,7 @@
     </div>
     <br />
     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-        <asp:Button class="btn btn-success" ID="btnToExcel" runat="server" Text="輸出成 Excel 報表" Width="40%" OnClick="btnToExcel_Click" /><br /><br />
-    </div>
+        <asp:Button class="btn btn-outline-success" ID="btnToExcel" runat="server" Text="輸出成 Excel 報表" Width="40%" OnClick="btnToExcel_Click" />
+    </div><br /><br />
 
 </asp:Content>

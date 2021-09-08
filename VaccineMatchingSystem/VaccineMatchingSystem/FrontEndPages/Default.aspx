@@ -1,22 +1,50 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/FrontMaster.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="VaccineMatchingSystem.FrontEndPages.Default" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-<%--    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>--%>
-
-    <%-- 引用外部套件區 --%>
     <link href="../ExternalTools/css/bootstrap.css" rel="stylesheet" />
     <script src="../ExternalTools/js/bootstrap.js"></script>
-   <%-- <script src="../ExternalTools/jquery-3.6.0.min.js"></script>--%>
 
-    <%-- CSS編輯區 --%>
-    <style type="text/css">
+    <div class="container text-center">
+        <h4>系統介紹</h4>
 
-    </style>
+        <table class="table table-striped table-light">
+            <thead>
+                <tr>
+                    <th>系統簡述</th>
+                    <th>系統起源</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>取得外部資料，進入主系統搭配演算法，計算配對結果並將結果輸出報表</td>
+                    <td>渴望了解整體疫苗系統的運作架構及邏輯</td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+        <h4>系統目標</h4>
+        <div class="text-center">
+            模擬疫苗登記施打系統運作<br />
+            提供管理者疫苗分配方法<br />
+            以不浪費疫苗為原則
+        </div><br />
+        <br />
+        <h4>系統開發者</h4>
+        <p class="text-center font-weight-bold">陳顥文  &nbsp &nbsp &nbsp  廖子寬  &nbsp &nbsp &nbsp  吳宗叡</p>
+    </div>
 
-    <%-- Html頁面編輯區 --%>
+    <div class="text-center">
+        <asp:Button  CssClass="btn btn-secondary align" ID="btnToLogin" runat="server" Text="進入系統" OnClick="btnToLogin_Click" />
+    </div><br />
 
-    <asp:Button CssClass="btn btn-outline-primary" ID="btnToLogin" runat="server" Text="進入系統" OnClick="btnToLogin_Click"/>
+    
+</asp:Content>
 
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
+    <divAnimate>
+        <img src="Pics/duck%20Animation.png" height="50" width="50"/>
+    </divAnimate>
 </asp:Content>
