@@ -15,6 +15,51 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
     {
 
         /// <summary>
+        /// btnGetVaccName 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGetVaccName;
+
+        /// <summary>
+        /// btnGetVaccDataCancel 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGetVaccDataCancel;
+
+        /// <summary>
+        /// btnGetVaccData 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGetVaccData;
+
+        /// <summary>
+        /// ddlVaccName 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlVaccName;
+
+        /// <summary>
+        /// ddlVaccBatch 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlVaccBatch;
+
+        /// <summary>
         /// GridViewMatchResult 控制項。
         /// </summary>
         /// <remarks>
@@ -22,24 +67,6 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridViewMatchResult;
-
-        /// <summary>
-        /// btnCalculateScore 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCalculateScore;
-
-        /// <summary>
-        /// litShowScore 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal litShowScore;
 
         /// <summary>
         /// btnVaccineMatch 控制項。

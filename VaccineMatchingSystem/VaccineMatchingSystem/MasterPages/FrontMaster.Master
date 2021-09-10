@@ -21,32 +21,34 @@
             animation-duration: 10s;
             animation-iteration-count: infinite;
         }
+
         @keyframes example {
             0% {
-                
-                left: 100px;
+                left: 0px;
                 top: 0px;
             }
-
-            25% {
-                
-                left: 1370px;
-                top: 0px;
+            15% {
+                left: 150px;
+                top: 100px;
+            }
+            30% {
+                left: 350px;
+                top: 10px;
             }
             50% {
-                
-                left: 1370px;
-                top: 500px;
+                left: 650px;
+                top: 0px;
             }
-            75% {
-                
-                left: 100px;
-                top: 500px;
+            65% {
+                left: 950px;
+                top: 0px;
             }
-
+            85% {
+                left: 1200px;
+                top: 70px;
+            }
             100% {
-                
-                left: 100px;
+                left: 1450px;
                 top: 0px;
             }
         }
@@ -82,11 +84,9 @@
             </table>
         </div>
 
-
-
         <div class="col-md-4">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
-                <!--這裡放主要內容-->
+                <!--這裡放小鴨動畫-->
             </asp:ContentPlaceHolder>
         </div>
 
@@ -117,7 +117,7 @@
                     <td></td>
 
                     <td width="30%" align="right">
-                        
+
                         <h4>
                             <img src="../MasterPages/Pics/Duck.png" style="height: 63px; width: 60px" id="icon" />
                             <asp:Label runat="server" ID="Label2">7302 黃色小鴨集團</asp:Label>
@@ -128,7 +128,7 @@
             </table>
         </div>
 
-        
+
     </form>
 </body>
 </html>

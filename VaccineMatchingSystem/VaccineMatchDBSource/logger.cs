@@ -8,13 +8,14 @@ namespace VaccineMatchDBSource
 {
     public class logger
     {
+        public static string logPath;
         public static void WriteLog(Exception ex)
         {
             string msg = $@"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}
                         {ex.ToString()}
                 ";
 
-            string logPath = ("C:\\Logs\\FinalProject\\Log.log");
+            //string logPath = ("C:\\Logs\\FinalProject\\Log.log");
             string folderPath = System.IO.Path.GetDirectoryName(logPath);
 
             if (!System.IO.Directory.Exists(folderPath))
@@ -28,4 +29,6 @@ namespace VaccineMatchDBSource
             throw ex;
         }
     }
+
+
 }

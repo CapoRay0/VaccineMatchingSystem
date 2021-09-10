@@ -8,9 +8,6 @@ using System.Web.SessionState;
 
 namespace VaccineMatchingSystem.FrontEndPages
 {
-    /// <summary>
-    /// DrawingVerification 的摘要描述
-    /// </summary>
     public class DrawingVerification : IHttpHandler, IRequiresSessionState
     {
         public void ProcessRequest(HttpContext context)

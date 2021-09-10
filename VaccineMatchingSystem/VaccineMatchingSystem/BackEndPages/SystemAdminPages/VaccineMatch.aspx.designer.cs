@@ -15,13 +15,22 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
     {
 
         /// <summary>
-        /// lblVaccShow 控制項。
+        /// lbShow 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblVaccShow;
+        protected global::System.Web.UI.WebControls.Label lbShow;
+
+        /// <summary>
+        /// btnGetVaccName 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGetVaccName;
 
         /// <summary>
         /// btnGetVaccData 控制項。
@@ -33,6 +42,33 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         protected global::System.Web.UI.WebControls.Button btnGetVaccData;
 
         /// <summary>
+        /// btnGetVaccDataCancel 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGetVaccDataCancel;
+
+        /// <summary>
+        /// ddlVaccName 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlVaccName;
+
+        /// <summary>
+        /// ddlVaccBatch 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlVaccBatch;
+
+        /// <summary>
         /// RepeaterShowVacc 控制項。
         /// </summary>
         /// <remarks>
@@ -40,6 +76,15 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater RepeaterShowVacc;
+
+        /// <summary>
+        /// phAlgWeightList 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder phAlgWeightList;
 
         /// <summary>
         /// Label5 控制項。
@@ -105,13 +150,13 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
-        /// txt_age_direction 控制項。
+        /// ddl_age_direction 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_age_direction;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_age_direction;
 
         /// <summary>
         /// Label10 控制項。
@@ -123,13 +168,13 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         protected global::System.Web.UI.WebControls.Label Label10;
 
         /// <summary>
-        /// txt_ordinal 控制項。
+        /// ddl_ordinal 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_ordinal;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_ordinal;
 
         /// <summary>
         /// Label13 控制項。
@@ -141,13 +186,256 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         protected global::System.Web.UI.WebControls.Label Label13;
 
         /// <summary>
-        /// txt_area 控制項。
+        /// ddl_Area 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_area;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_Area;
+
+        /// <summary>
+        /// ddl_Country 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl_Country;
+
+        /// <summary>
+        /// btn_AreaCheck 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_AreaCheck;
+
+        /// <summary>
+        /// btn_AreaCancel 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_AreaCancel;
+
+        /// <summary>
+        /// Literal12 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal Literal12;
+
+        /// <summary>
+        /// ph_JobWeightList 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder ph_JobWeightList;
+
+        /// <summary>
+        /// txt_JobInput1 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_JobInput1;
+
+        /// <summary>
+        /// ddl_JobWeightSelect1 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl_JobWeightSelect1;
+
+        /// <summary>
+        /// txt_JobInput2 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_JobInput2;
+
+        /// <summary>
+        /// ddl_JobWeightSelect2 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl_JobWeightSelect2;
+
+        /// <summary>
+        /// txt_JobInput3 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_JobInput3;
+
+        /// <summary>
+        /// ddl_JobWeightSelect3 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl_JobWeightSelect3;
+
+        /// <summary>
+        /// txt_JobInput4 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_JobInput4;
+
+        /// <summary>
+        /// ddl_JobWeightSelect4 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl_JobWeightSelect4;
+
+        /// <summary>
+        /// txt_JobInput5 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_JobInput5;
+
+        /// <summary>
+        /// ddl_JobWeightSelect5 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl_JobWeightSelect5;
+
+        /// <summary>
+        /// Literal14 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal Literal14;
+
+        /// <summary>
+        /// ph_StateWeightList 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder ph_StateWeightList;
+
+        /// <summary>
+        /// txt_StateInput1 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_StateInput1;
+
+        /// <summary>
+        /// ddl_StateWeightSelect1 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl_StateWeightSelect1;
+
+        /// <summary>
+        /// txt_StateInput2 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_StateInput2;
+
+        /// <summary>
+        /// ddl_StateWeightSelect2 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl_StateWeightSelect2;
+
+        /// <summary>
+        /// txt_StateInput3 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_StateInput3;
+
+        /// <summary>
+        /// ddl_StateWeightSelect3 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl_StateWeightSelect3;
+
+        /// <summary>
+        /// txt_StateInput4 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_StateInput4;
+
+        /// <summary>
+        /// ddl_StateWeightSelect4 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl_StateWeightSelect4;
+
+        /// <summary>
+        /// txt_StateInput5 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_StateInput5;
+
+        /// <summary>
+        /// ddl_StateWeightSelect5 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl_StateWeightSelect5;
 
         /// <summary>
         /// Label6 控制項。

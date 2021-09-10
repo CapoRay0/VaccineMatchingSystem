@@ -469,9 +469,10 @@ namespace DataFormatTransfer
         }
 
         /// <summary>
-        /// 將指定路徑上的Excel檔案insert進db
+        /// 將指定路徑上的Excel檔案insert進db 
         /// </summary>
         /// <param name="filePath">檔案路徑</param>
+        /// <param name="insertDTIntoSQL">透過委派來決定要用哪個方法</param>
         /// <returns></returns>
         public static bool InsertExcelToDb(string filePath, InsertDTIntoSQL insertDTIntoSQL)
         {
@@ -479,7 +480,7 @@ namespace DataFormatTransfer
             {
                 DataTable dt = GetDataTableFromExcelFile(filePath);
                 var a = dt.Rows.Count;
-                insertDTIntoSQL.Invoke(dt);
+                insertDTIntoSQL.Invoke(dt); // 委派的執行處
                 //InsertUserInfoIntoSQL(dt);
                 return true;  //資料庫輸入成功
             }

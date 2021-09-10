@@ -32,8 +32,8 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         protected void btnToExcel_Click(object sender, EventArgs e)
         {
             DataTable dt = ExcelDataManager.GetUserFeedback();
-
-            string outputPath = "C:\\VaccineExcel\\使用者回饋報表.xlsx";
+            string thisFilePath = Server.MapPath("~/");
+            string outputPath = ExcelDataManager.GetUpLevelDirectory(thisFilePath, 2) + "\\Data\\ExcelFiles\\使用者回饋報表.xlsx";
 
             if (ExcelDataManager.DataTableToExcel(dt, outputPath))
             {

@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuthManager.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserInfoModel.cs" />
   </ItemGroup>
@@ -51,6 +52,15 @@
       <Project>{2f08997a-6297-47a1-af49-d2420829a6a2}</Project>
       <Name>VaccineMatchDBSource</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\VaccineMatchAuth.dll" />
+    <Content Include="bin\Debug\VaccineMatchAuth.pdb" />
+    <Content Include="bin\Debug\VaccineMatchDBSource.dll" />
+    <Content Include="bin\Debug\VaccineMatchDBSource.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

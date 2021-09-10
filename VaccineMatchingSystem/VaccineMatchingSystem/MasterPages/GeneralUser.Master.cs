@@ -30,5 +30,10 @@ namespace VaccineMatchingSystem.MasterPages
             AuthManager.Logout();
             Response.Redirect("../../FrontEndPages/Default.aspx");
         }
+
+        protected void btnContact_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("mailto:dailyuseken@gmail.com");
+        }
     }
 }

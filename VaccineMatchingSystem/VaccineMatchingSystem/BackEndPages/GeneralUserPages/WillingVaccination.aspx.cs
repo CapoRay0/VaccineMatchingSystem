@@ -62,6 +62,7 @@ namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
                     string VaccineBNT = "BNT";
                     AccountingManager.InsertUserWillingVaccin(CurrentUserGuid, VaccineBNT);
                 }
+                this.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('恭喜您，疫苗登記成功!!')</script>");
             }
             else
             {

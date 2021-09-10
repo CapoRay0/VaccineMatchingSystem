@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataFormatTransfer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,9 @@ namespace VaccineMatchingSystem.FrontEndPages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            string thisFilePath = Server.MapPath("~/");   //取得自己.aspx的路徑
+            string thisFilePathFather = ExcelDataManager.GetUpLevelDirectory(thisFilePath, 2) + "\\Data\\Logs\\";   //找上2層，Logs
+            VaccineMatchDBSource.logger.logPath = thisFilePathFather + "Log.log";
         }
 
         protected void btnToLogin_Click(object sender, EventArgs e)

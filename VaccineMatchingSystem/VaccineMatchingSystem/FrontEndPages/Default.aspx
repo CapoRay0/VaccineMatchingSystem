@@ -27,7 +27,7 @@
         <br />
         <h4>系統目標</h4>
         <div class="text-center">
-            模擬疫苗登記施打系統運作<br />
+            模擬疫苗登記配對系統運作<br />
             提供管理者疫苗分配方法<br />
             以不浪費疫苗為原則
         </div><br />
@@ -48,3 +48,4 @@
         <img src="Pics/duck%20Animation.png" height="50" width="50"/>
     </divAnimate>
 </asp:Content>
+

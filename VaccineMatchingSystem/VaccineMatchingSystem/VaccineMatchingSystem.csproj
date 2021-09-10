@@ -44,6 +44,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Extensions, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.Extensions.4.3.1\lib\net462\System.Runtime.Extensions.dll</HintPath>
       <Private>True</Private>
@@ -108,11 +111,11 @@
     <Content Include="FrontEndPages\ForgotPWD.aspx" />
     <Content Include="FrontEndPages\Login.aspx" />
     <Content Include="FrontEndPages\Pics\duck Animation.png" />
-    <Content Include="FrontEndPages\Pics\login.png" />
-    <Content Include="FrontEndPages\Pics\PWD.png" />
     <Content Include="Global.asax" />
     <Content Include="MasterPages\Pics\Duck.png" />
     <Content Include="MasterPages\Pics\icon.png" />
+    <Content Include="MasterPages\Pics\system.png" />
+    <Content Include="MasterPages\Pics\user.png" />
     <Content Include="MasterPages\Pics\website menu.png" />
     <Content Include="Web.config" />
   </ItemGroup>
