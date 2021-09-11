@@ -401,18 +401,5 @@ namespace VaccineMatchDBSource
             }
         }
 
-        /// <summary>
-        /// 可能是多餘的
-        /// </summary>
-        /// <param name="dataRow"></param>
-        /// <returns></returns>
-        //public static bool CheckDataRowIsNull(DataRow dataRow)
-        //{
-        //    if (dataRow == null)
-        //    {
-        //        return true;
-        //    }
-        //    return false;
-        //}
     }
 }

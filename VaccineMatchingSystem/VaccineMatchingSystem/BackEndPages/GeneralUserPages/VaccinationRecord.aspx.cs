@@ -36,18 +36,18 @@ namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
             }
             else
             {
-                this.lblNoResult.Text = "尚未匹配到疫苗";
+                this.lblNoResult.Text = "<br /><br /><br /><br />尚未匹配到疫苗";
             }
 
 
 
             if (CurrentUser.Gender == 1)
             {
-                this.lblTitleShow.Text = $"{CurrentUser.Name}先生您好";
+                this.lblTitleShow.Text = $"{CurrentUser.Name}先生您好，您的疫苗分配結果如下";
             }
             else if (CurrentUser.Gender == 2)
             {
-                this.lblTitleShow.Text = $"{CurrentUser.Name}小姐您好";
+                this.lblTitleShow.Text = $"{CurrentUser.Name}小姐您好，您的疫苗分配結果如下";
             }
 
         }

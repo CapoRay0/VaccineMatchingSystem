@@ -79,7 +79,7 @@ namespace VaccineMatchDBSource
                         [UserID]
                         ,[IsEffective]
                     FROM [WillingRegister]
-                    WHERE IsEffective = 1 AND UserID = @userID";
+                    WHERE [IsEffective] = 1 AND [UserID] = @userID";
 
             List<SqlParameter> paramList = new List<SqlParameter>();
             paramList.Add(new SqlParameter("@userID", userGuid));
@@ -88,7 +88,7 @@ namespace VaccineMatchDBSource
             {
                 var dr = DBHelper.ReadDataRow(connStr, dbCommand, paramList);
 
-                if (CheckWillingIsNull(dr))
+                if (dr != null)
                 {
                     return true;
                 }
@@ -100,14 +100,38 @@ namespace VaccineMatchDBSource
                 return false;
             }
         }
-        public static bool CheckWillingIsNull(DataRow dataRow)
-        {
-            if (dataRow == null)
-            {
-                return true;
-            }
-            return false;
-        }
 
+
+        //public static bool CheckSingleWillingIsNull(Guid userGuid, string WillingVName)
+        //{
+        //    string connStr = DBHelper.GetConnectionString();
+        //    string dbCommand =
+        //        $@" SELECT 
+        //                [UserID]
+        //                ,[IsEffective]
+        //                ,[VaccineWilling]
+        //            FROM [WillingRegister]
+        //            WHERE [IsEffective] = 1 AND [UserID] = @userID AND [VaccineWilling] = @willingVName";
+
+        //    List<SqlParameter> paramList = new List<SqlParameter>();
+        //    paramList.Add(new SqlParameter("@userID", userGuid));
+        //    paramList.Add(new SqlParameter("@willingVName", WillingVName));
+
+        //    try
+        //    {
+        //        var dr = DBHelper.ReadDataRow(connStr, dbCommand, paramList);
+
+        //        if (dr == null)
+        //        {
+        //            return true;
+        //        }
+        //        return false;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        logger.WriteLog(ex);
+        //        return false;
+        //    }
+        //}
     }
 }

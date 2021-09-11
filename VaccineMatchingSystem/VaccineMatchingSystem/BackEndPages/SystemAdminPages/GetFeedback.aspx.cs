@@ -32,8 +32,17 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         protected void btnToExcel_Click(object sender, EventArgs e)
         {
             DataTable dt = ExcelDataManager.GetUserFeedback();
-            string thisFilePath = Server.MapPath("~/");
-            string outputPath = ExcelDataManager.GetUpLevelDirectory(thisFilePath, 2) + "\\Data\\ExcelFiles\\使用者回饋報表.xlsx";
+            //string thisFilePath = Server.MapPath("~/");
+            //string outputPath = ExcelDataManager.GetUpLevelDirectory(thisFilePath, 2) + "\\Data\\ExcelFiles\\使用者回饋報表.xlsx";
+
+            //取得機器+user name
+            var loginAccount = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+            //取得機器名
+            var machineName = Environment.MachineName;
+            //讓loginAccount減去機器名
+            loginAccount = loginAccount.Remove(0, machineName.Length + 1);
+            string outputPath = $@"C:\Users\{loginAccount}\Downloads\使用者回饋報表.xlsx";
+
 
             if (ExcelDataManager.DataTableToExcel(dt, outputPath))
             {

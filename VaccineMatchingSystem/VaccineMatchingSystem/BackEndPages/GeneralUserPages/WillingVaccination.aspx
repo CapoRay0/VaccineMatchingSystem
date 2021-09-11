@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <br /><br /><br /><br />
+    <br /><br /><br /><br /><br />
     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
         <h2><asp:Label ID="lblTitleShow" runat="server" Text=""></asp:Label></h2>
     </div>
@@ -22,19 +22,19 @@
             <td>
                 <asp:Label class="col-form-label-lg" ID="lblVaccAZ" runat="server" Text="AZ"></asp:Label></td>
             <td>
-                <asp:CheckBox class="form-control-lg" ID="CheckBoxVaccAZ" runat="server" Text=" 願意施打" /></td>
+                <asp:CheckBox class="form-control-lg" ID="CheckBoxVaccAZ" runat="server" Text="請點選" /></td>
         </tr>
         <tr>
             <td>
                 <asp:Label class="col-form-label-lg" ID="lblVaccMoz" runat="server" Text="Moderna"></asp:Label></td>
             <td>
-                <asp:CheckBox class="form-control-lg" ID="CheckBoxVaccMoz" runat="server" Text=" 願意施打" /></td>
+                <asp:CheckBox class="form-control-lg" ID="CheckBoxVaccMoz" runat="server" Text="請點選" /></td>
         </tr>
         <tr>
             <td>
                 <asp:Label class="col-form-label-lg" ID="lblVaccBNT" runat="server" Text="BNT"></asp:Label></td>
             <td>
-                <asp:CheckBox class="form-control-lg" ID="CheckBoxVaccBNT" runat="server" Text=" 願意施打" /></td>
+                <asp:CheckBox class="form-control-lg" ID="CheckBoxVaccBNT" runat="server" Text="請點選" /></td>
         </tr>
     </table>
     </div>

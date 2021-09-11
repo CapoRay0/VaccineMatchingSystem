@@ -21,7 +21,6 @@ namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
             }
 
             var CurrentUser = AuthManager.GetCurrentUser();
-
             Guid CurrentUserGuid = CurrentUser.UserID;
 
 
@@ -45,7 +44,7 @@ namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
             if (!CheckBoxVaccAZ.Checked && !CheckBoxVaccMoz.Checked && !CheckBoxVaccBNT.Checked)
                 this.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('請點選願意施打的疫苗')</script>");
 
-            if (AccountingManager.CheckWillingIfChecked(CurrentUserGuid))
+            if (!AccountingManager.CheckWillingIfChecked(CurrentUserGuid))
             {
                 if (CheckBoxVaccAZ.Checked)
                 {
@@ -66,14 +65,41 @@ namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
             }
             else
             {
-                this.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('本批次已完成登記')</script>");
+                this.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('本批次已完成登記，欲更改請先取消')</script>");
             }
+
+
+            //if (!AccountingManager.CheckSingleWillingIsNull(CurrentUserGuid, "AZ"))
+            //{
+            //    this.CheckBoxVaccAZ.Text = "已完成登記";
+            //    this.CheckBoxVaccAZ.Checked = true;
+            //}
+            //else
+            //{
+            //    this.CheckBoxVaccAZ.Text = "請點選";
+            //    this.CheckBoxVaccAZ.Checked = false;
+            //}
+
 
         }
 
         protected void btnReject_Click(object sender, EventArgs e)
         {
-            Response.Redirect("UnWillingVaccination.aspx");
+            var CurrentUser = AuthManager.GetCurrentUser();
+
+            Guid CurrentUserGuid = CurrentUser.UserID;
+
+            if (!MatchManager.CheckWillingIsNull(CurrentUserGuid))
+            {
+                MatchManager.DeleteWilling(CurrentUserGuid);
+                this.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('已將您的預約取消')</script>");
+            }
+            else
+            {
+                this.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('尚無預約紀錄')</script>");
+            }
+
+            
         }
     }
 }

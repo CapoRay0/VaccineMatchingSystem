@@ -33,15 +33,6 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         protected global::System.Web.UI.WebControls.Button btnGetVaccName;
 
         /// <summary>
-        /// btnGetVaccData 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGetVaccData;
-
-        /// <summary>
         /// btnGetVaccDataCancel 控制項。
         /// </summary>
         /// <remarks>
@@ -49,6 +40,15 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnGetVaccDataCancel;
+
+        /// <summary>
+        /// btnGetVaccData 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGetVaccData;
 
         /// <summary>
         /// ddlVaccName 控制項。
@@ -69,15 +69,6 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         protected global::System.Web.UI.WebControls.DropDownList ddlVaccBatch;
 
         /// <summary>
-        /// RepeaterShowVacc 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater RepeaterShowVacc;
-
-        /// <summary>
         /// phAlgWeightList 控制項。
         /// </summary>
         /// <remarks>
@@ -87,22 +78,13 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         protected global::System.Web.UI.WebControls.PlaceHolder phAlgWeightList;
 
         /// <summary>
-        /// Label5 控制項。
+        /// Label1 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
-
-        /// <summary>
-        /// Literal2 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal2;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
         /// Label2 控制項。
@@ -222,13 +204,13 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         protected global::System.Web.UI.WebControls.Button btn_AreaCancel;
 
         /// <summary>
-        /// Literal12 控制項。
+        /// Label7 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal12;
+        protected global::System.Web.UI.WebControls.Label Label7;
 
         /// <summary>
         /// ph_JobWeightList 控制項。
@@ -330,13 +312,13 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         protected global::System.Web.UI.WebControls.DropDownList ddl_JobWeightSelect5;
 
         /// <summary>
-        /// Literal14 控制項。
+        /// Label8 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal14;
+        protected global::System.Web.UI.WebControls.Label Label8;
 
         /// <summary>
         /// ph_StateWeightList 控制項。
@@ -438,15 +420,6 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         protected global::System.Web.UI.WebControls.DropDownList ddl_StateWeightSelect5;
 
         /// <summary>
-        /// Label6 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
-
-        /// <summary>
         /// btnCalculate 控制項。
         /// </summary>
         /// <remarks>
@@ -454,14 +427,5 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCalculate;
-
-        /// <summary>
-        /// ltShow 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltShow;
     }
 }

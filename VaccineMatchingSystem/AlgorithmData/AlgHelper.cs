@@ -92,7 +92,7 @@ namespace AlgorithmData
                 }
             }
 
-            return answer; ;
+            return answer;
         }
 
         /// <summary>

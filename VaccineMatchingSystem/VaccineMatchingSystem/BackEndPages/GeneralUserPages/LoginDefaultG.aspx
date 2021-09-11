@@ -31,5 +31,5 @@
         <asp:Button class="btn btn-outline-success btn-lg" ID="btnYesDoes" runat="server" Text="   願意施打   " OnClick="btnYesDoes_Click"/> &nbsp &nbsp &nbsp
         <asp:Button class="btn btn-outline-primary" ID="btnQuery" runat="server" Text="查詢配對狀態" OnClick="btnQuery_Click" /> &nbsp &nbsp &nbsp
         <asp:Button class="btn btn-outline-danger" ID="btnNoDose" runat="server" Text="我有問題" OnClick="btnNoDose_Click"/>
-    </div><br /><br /><br /><br />
+    </div><br /><br /><br /><br /><br />
 </asp:Content>

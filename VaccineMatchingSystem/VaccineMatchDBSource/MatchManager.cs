@@ -511,15 +511,15 @@ namespace VaccineMatchDBSource
 
                 $@"
                     SELECT 
-            Ｕ.[Name],
-            U.[Occupation],
-            U.[Age],
-            M.[Priority]
+                      U.[Name] AS '姓名',
+                      U.[Occupation] AS '職業',
+                      U.[Age] AS '年齡',
+                      M.[Priority] AS '順位'
                   FROM [MatchingResultRecord] AS M
                   JOIN [UserInfo] AS U
-                       ON U.[UserID] = M.[UserID]
+                      ON U.[UserID] = M.[UserID]
                   WHERE [AlgorithmID] = @AlgorithmID
-      ORDER BY M.[Priority] ASC
+                  ORDER BY M.[Priority] ASC
                 ";
 
             List<SqlParameter> list = new List<SqlParameter>();
@@ -602,5 +602,52 @@ namespace VaccineMatchDBSource
             }
         }
 
+
+        public static bool CheckWillingIsNull(Guid UserID)
+        {
+            string connStr = DBHelper.GetConnectionString();
+            string dbCommand =
+                $@" SELECT [UserID]
+                     FROM [WillingRegister]
+                     WHERE [UserID] = @userID
+                ";
+
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@userID", UserID));
+
+            try
+            {
+                var dr = DBHelper.ReadDataRow(connStr, dbCommand, list);
+
+                if (dr == null)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception ex)
+            {
+                logger.WriteLog(ex);
+                return false;
+            }
+        }
+        public static void DeleteWilling(Guid UserID)
+        {
+            string connectionString = DBHelper.GetConnectionString();
+            string dbCommandString =
+                $@" DELETE [WillingRegister]
+                    WHERE [UserID] = @userID";
+
+            List<SqlParameter> paramList = new List<SqlParameter>();
+            paramList.Add(new SqlParameter("@userID", UserID));
+
+            try
+            {
+                DBHelper.ModifyData(connectionString, dbCommandString, paramList);
+            }
+            catch (Exception ex)
+            {
+                logger.WriteLog(ex);
+            }
+        }
     }
 }
