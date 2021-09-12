@@ -105,6 +105,14 @@ namespace VaccineMatchingSystem.FrontEndPages
                 return false;
             }
 
+            // 密碼長度限制 (8~16)
+            if (this.txtNewPWD.Text.Length < 8 || this.txtNewPWD.Text.Length > 16)
+            {
+                msgList.Add("密碼長度限制 (需要8~16碼)");
+                errorMsgList = msgList;
+                return false;
+            }
+
             // 檢查帳號及原密碼是否存在
             string inp_Account = this.txtAccount.Text;
             string inp_PWD = this.txtOrigPWD.Text;
@@ -116,6 +124,7 @@ namespace VaccineMatchingSystem.FrontEndPages
                 return false;
             }
 
+            
             errorMsgList = msgList;
 
             if (msgList.Count == 0)

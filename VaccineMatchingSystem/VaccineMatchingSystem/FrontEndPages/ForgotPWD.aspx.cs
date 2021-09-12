@@ -80,6 +80,14 @@ namespace VaccineMatchingSystem.FrontEndPages
                 return false;
             }
 
+            // 密碼長度限制 (8~16)
+            if (this.txtNewPWD.Text.Length < 8 || this.txtNewPWD.Text.Length > 16)
+            {
+                msgList.Add("密碼長度限制 (需要8~16碼)");
+                errorMsgList = msgList;
+                return false;
+            }
+
             // 檢查姓名及身分證是否存在
             string inp_Name = this.txtName.Text;
             string inp_ID = this.txtID.Text;

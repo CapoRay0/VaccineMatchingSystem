@@ -42,7 +42,7 @@ namespace VaccineMatchingSystem.DeveloperPages
 
             DateTime dateTime = DateTime.Now;
             var ans = (dateTime - startTime);
-            this.lt_show.Text = ans.ToString();
+            this.lt_show.Text = "共花費 "+ ans.ToString() + " 秒";
 
         }
 
