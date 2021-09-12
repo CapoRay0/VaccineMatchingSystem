@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2AFDDE8E-BB19-45FD-9901-77D0AD22BFCB}</ProjectGuid>
+    <ProjectGuid>{8831CBEE-174D-4279-91CB-7D09AFEA9700}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Data</RootNamespace>
-    <AssemblyName>Data</AssemblyName>
+    <RootNamespace>DevloperCtrl</RootNamespace>
+    <AssemblyName>DevloperCtrl</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,11 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DevelopHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ExcelFiles\" />
-    <Folder Include="Logs\" />
+    <ProjectReference Include="..\AlgorithmData\AlgorithmData.csproj">
+      <Project>{F8216231-B525-4683-9D91-1AB5CB2BA3C2}</Project>
+      <Name>AlgorithmData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VaccineMatchDBSource\VaccineMatchDBSource.csproj">
+      <Project>{2F08997A-6297-47A1-AF49-D2420829A6A2}</Project>
+      <Name>VaccineMatchDBSource</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

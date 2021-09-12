@@ -102,36 +102,79 @@ namespace VaccineMatchDBSource
         }
 
 
-        //public static bool CheckSingleWillingIsNull(Guid userGuid, string WillingVName)
-        //{
-        //    string connStr = DBHelper.GetConnectionString();
-        //    string dbCommand =
-        //        $@" SELECT 
-        //                [UserID]
-        //                ,[IsEffective]
-        //                ,[VaccineWilling]
-        //            FROM [WillingRegister]
-        //            WHERE [IsEffective] = 1 AND [UserID] = @userID AND [VaccineWilling] = @willingVName";
+        public static bool CheckSingleWillingIsNull(Guid userGuid, string WillingVName)
+        {
+            string connStr = DBHelper.GetConnectionString();
+            string dbCommand =
+                $@" SELECT 
+                        [UserID]
+                        ,[IsEffective]
+                        ,[VaccineWilling]
+                    FROM [WillingRegister]
+                    WHERE [IsEffective] = 1 AND [UserID] = @userID AND [VaccineWilling] = @willingVName";
 
-        //    List<SqlParameter> paramList = new List<SqlParameter>();
-        //    paramList.Add(new SqlParameter("@userID", userGuid));
-        //    paramList.Add(new SqlParameter("@willingVName", WillingVName));
+            List<SqlParameter> paramList = new List<SqlParameter>();
+            paramList.Add(new SqlParameter("@userID", userGuid));
+            paramList.Add(new SqlParameter("@willingVName", WillingVName));
 
-        //    try
-        //    {
-        //        var dr = DBHelper.ReadDataRow(connStr, dbCommand, paramList);
+            try
+            {
+                var dr = DBHelper.ReadDataRow(connStr, dbCommand, paramList);
 
-        //        if (dr == null)
-        //        {
-        //            return true;
-        //        }
-        //        return false;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        logger.WriteLog(ex);
-        //        return false;
-        //    }
-        //}
+                if (dr == null)
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                logger.WriteLog(ex);
+                return false;
+            }
+        }
+
+
+
+        public class Vaccination
+        {
+            public Guid VGUID { get; set; }
+            public string VName { get; set; }
+            public int Quantity { get; set; }
+            public int VBatch { get; set; }
+            public int IsMatched { get; set; }
+        }
+
+        /// <summary> 取得疫苗資訊 => 用來動態加入疫苗 </summary>
+        /// <returns></returns>
+        public static DataTable EveryVName()
+        {
+            string connectionString = DBHelper.GetConnectionString();
+            string dbCommandString =
+
+                $@"SELECT [VGUID]
+                         ,[VName]
+                         ,[Quantity]
+                         ,[VBatch]
+                         ,[IsMatched]
+                     FROM [VaccineInventory]
+                     GROUP BY [VName],[VGUID],[Quantity],[VBatch],[IsMatched]
+                ";
+
+            List<SqlParameter> list = new List<SqlParameter>();
+            //list.Add(new SqlParameter("@vguid", VGUID));
+            try
+            {
+                return DBHelper.ReadDataTable(connectionString, dbCommandString, list);
+            }
+            catch (Exception ex)
+            {
+                logger.WriteLog(ex);
+                return null;
+            }
+        }
+
+
+
     }
 }

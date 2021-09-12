@@ -3,41 +3,37 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <br /><br /><br /><br /><br />
+    <br /><br /><br /><br />
     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
         <h2><asp:Label ID="lblTitleShow" runat="server" Text=""></asp:Label></h2>
     </div>
     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
         <h2><asp:Label ID="lblWelcome" runat="server" Text="歡迎使用疫苗配對系統"></asp:Label></h2>
     </div>
-    <br /><br />
+    <br />
     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-    <h3>請登記您的疫苗施打意願</h3>
+    <h4>請登記您的疫苗施打意願</h4>
     </div>
     <br />
 
-    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+    <div class="d-grid gap-2 d-md-flex justify-content-md-center btn-lg btn-light">
     <table>
         <tr>
-            <td>
-                <asp:Label class="col-form-label-lg" ID="lblVaccAZ" runat="server" Text="AZ"></asp:Label></td>
-            <td>
-                <asp:CheckBox class="form-control-lg" ID="CheckBoxVaccAZ" runat="server" Text="請點選" /></td>
+            <td><asp:CheckBox class="" ID="CheckBoxVaccAZ" runat="server" Text="AZ" /></td>
         </tr>
         <tr>
-            <td>
-                <asp:Label class="col-form-label-lg" ID="lblVaccMoz" runat="server" Text="Moderna"></asp:Label></td>
-            <td>
-                <asp:CheckBox class="form-control-lg" ID="CheckBoxVaccMoz" runat="server" Text="請點選" /></td>
+            <td><asp:CheckBox class="" ID="CheckBoxVaccMoz" runat="server" Text="Moderna" /></td>
         </tr>
         <tr>
-            <td>
-                <asp:Label class="col-form-label-lg" ID="lblVaccBNT" runat="server" Text="BNT"></asp:Label></td>
-            <td>
-                <asp:CheckBox class="form-control-lg" ID="CheckBoxVaccBNT" runat="server" Text="請點選" /></td>
+            <td><asp:CheckBox class="" ID="CheckBoxVaccBNT" runat="server" Text="BNT" /></td>
+        </tr>
+        <tr>
+            <td><asp:CheckBoxList class="" ID="cblNewVName" runat="server" DataValueField="VName" DataTextField="VName"></asp:CheckBoxList></td>
         </tr>
     </table>
     </div>
+
+    <%--<asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>--%>
 
     <br />
     <div class="d-grid gap-2 d-md-flex justify-content-md-center">

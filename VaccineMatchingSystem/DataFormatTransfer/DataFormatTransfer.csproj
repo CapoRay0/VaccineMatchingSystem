@@ -61,7 +61,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExcelDataManager.cs" />
-    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -77,27 +76,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="bin\Debug\BouncyCastle.Crypto.dll" />
-    <Content Include="bin\Debug\BouncyCastle.Crypto.xml" />
-    <Content Include="bin\Debug\DataFormatTransfer.dll" />
-    <Content Include="bin\Debug\DataFormatTransfer.pdb" />
-    <Content Include="bin\Debug\ICSharpCode.SharpZipLib.dll" />
-    <Content Include="bin\Debug\ICSharpCode.SharpZipLib.pdb" />
-    <Content Include="bin\Debug\ICSharpCode.SharpZipLib.xml" />
-    <Content Include="bin\Debug\NPOI.dll" />
-    <Content Include="bin\Debug\NPOI.OOXML.dll" />
-    <Content Include="bin\Debug\NPOI.OOXML.xml" />
-    <Content Include="bin\Debug\NPOI.OpenXml4Net.dll" />
-    <Content Include="bin\Debug\NPOI.OpenXmlFormats.dll" />
-    <Content Include="bin\Debug\NPOI.xml" />
-    <Content Include="bin\Debug\VaccineMatchAuth.dll" />
-    <Content Include="bin\Debug\VaccineMatchAuth.pdb" />
-    <Content Include="bin\Debug\VaccineMatchDBSource.dll" />
-    <Content Include="bin\Debug\VaccineMatchDBSource.pdb" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Release\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

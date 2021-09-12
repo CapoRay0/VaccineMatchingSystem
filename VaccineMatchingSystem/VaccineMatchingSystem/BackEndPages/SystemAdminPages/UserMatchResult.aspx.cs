@@ -27,6 +27,15 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
                 }
             }
             #endregion
+            if (!IsPostBack)
+            {
+                if (Session["timeSpan"] != null)
+                {
+                    this.Lt_timeSpan.Text = "本次演算花費時間： " + Session["timeSpan"].ToString();
+                    Session["timeSpan"] = null;
+                }
+
+            }
         }
 
         /// <summary>

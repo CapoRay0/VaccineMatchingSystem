@@ -7,83 +7,74 @@
 // </自動產生的>
 //------------------------------------------------------------------------------
 
-namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
+namespace VaccineMatchingSystem.DeveloperPages
 {
 
 
-    public partial class WillingVaccination
+    public partial class Dev
     {
 
         /// <summary>
-        /// lblTitleShow 控制項。
+        /// form1 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTitleShow;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// lblWelcome 控制項。
+        /// lt_show 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblWelcome;
+        protected global::System.Web.UI.WebControls.Literal lt_show;
 
         /// <summary>
-        /// CheckBoxVaccAZ 控制項。
+        /// txt_addUsers 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBoxVaccAZ;
+        protected global::System.Web.UI.WebControls.TextBox txt_addUsers;
 
         /// <summary>
-        /// CheckBoxVaccMoz 控制項。
+        /// btn_addUsers 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBoxVaccMoz;
+        protected global::System.Web.UI.WebControls.Button btn_addUsers;
 
         /// <summary>
-        /// CheckBoxVaccBNT 控制項。
+        /// btn_clearDB 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBoxVaccBNT;
+        protected global::System.Web.UI.WebControls.Button btn_clearDB;
 
         /// <summary>
-        /// cblNewVName 控制項。
+        /// btn_clearDB2 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList cblNewVName;
+        protected global::System.Web.UI.WebControls.Button btn_clearDB2;
 
         /// <summary>
-        /// btnConfirm 控制項。
+        /// btn_returnToDefault 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnConfirm;
-
-        /// <summary>
-        /// btnReject 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnReject;
+        protected global::System.Web.UI.WebControls.Button btn_returnToDefault;
     }
 }

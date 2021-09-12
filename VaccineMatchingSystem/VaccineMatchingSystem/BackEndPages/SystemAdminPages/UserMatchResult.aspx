@@ -4,6 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <br /><br /><br /><br />    
     <div class="text-center">
+        <asp:Literal ID="Lt_timeSpan" runat="server"></asp:Literal><br />
         <h3>檢視現有配對</h3><br />
         <asp:Button class="btn btn-outline-success" ID="btnGetVaccName" runat="server" Text="取得疫苗批次" OnClick="btnGetVaccData_Click" />
         <asp:Button class="btn btn-outline-secondary" ID="btnGetVaccDataCancel" runat="server" Text=" 取消重選 " Visible="false" OnClick="btnGetVaccDataCancel_Click" /> &nbsp &nbsp

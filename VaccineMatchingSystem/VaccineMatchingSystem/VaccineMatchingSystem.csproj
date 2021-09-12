@@ -83,6 +83,7 @@
     <Content Include="BackEndPages\SystemAdminPages\LoginDefaultS.aspx" />
     <Content Include="BackEndPages\SystemAdminPages\UserMatchResult.aspx" />
     <Content Include="BackEndPages\SystemAdminPages\VaccineMatch.aspx" />
+    <Content Include="DeveloperPages\Dev.aspx" />
     <Content Include="ExternalTools\css\bootstrap-grid.css" />
     <Content Include="ExternalTools\css\bootstrap-grid.min.css" />
     <Content Include="ExternalTools\css\bootstrap-grid.rtl.css" />
@@ -175,6 +176,13 @@
     </Compile>
     <Compile Include="BackEndPages\SystemAdminPages\VaccineMatch.aspx.designer.cs">
       <DependentUpon>VaccineMatch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeveloperPages\Dev.aspx.cs">
+      <DependentUpon>Dev.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeveloperPages\Dev.aspx.designer.cs">
+      <DependentUpon>Dev.aspx</DependentUpon>
     </Compile>
     <Compile Include="FrontEndPages\ChangePWD.aspx.cs">
       <DependentUpon>ChangePWD.aspx</DependentUpon>
@@ -280,6 +288,10 @@
     <ProjectReference Include="..\DataFormatTransfer\DataFormatTransfer.csproj">
       <Project>{367E9576-5477-4318-85B7-0804B1B3F607}</Project>
       <Name>DataFormatTransfer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DevloperCtrl\DevloperCtrl.csproj">
+      <Project>{8831CBEE-174D-4279-91CB-7D09AFEA9700}</Project>
+      <Name>DevloperCtrl</Name>
     </ProjectReference>
     <ProjectReference Include="..\VaccineMatchAuth\VaccineMatchAuth.csproj">
       <Project>{f2a7dbb4-f87e-43cb-bab6-5ad23e476be8}</Project>

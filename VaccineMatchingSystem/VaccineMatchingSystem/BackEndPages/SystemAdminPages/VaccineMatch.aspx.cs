@@ -47,6 +47,7 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         /// <param name="e"></param>
         protected void btnCalculate_Click(object sender, EventArgs e)
         {
+            DateTime startTime = DateTime.Now;
 
             #region 宣告class
             //宣告使用者資訊
@@ -206,7 +207,12 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
 
             //this.lbShow.Text = "OK";
 
-            //return自己
+            //Show處理時間
+            DateTime dateTime = DateTime.Now;
+            var timeSpan = (dateTime - startTime);
+            Session["timeSpan"] = timeSpan.ToString();
+
+            //return到目標
             Response.Redirect("UserMatchResult.aspx");
 
         }
