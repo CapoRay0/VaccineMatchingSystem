@@ -149,8 +149,8 @@ namespace AlgorithmData
         {
             //補正: 民眾打了n劑-匹配-現在要打第n+1劑
             DoseCount++;
-            //每相差一個劑次，就少10%優先度
-            return limit - (Math.Abs(ordinal_dict - DoseCount) * (limit / 10));
+            //每相差一個劑次，就少5%優先度
+            return limit - (Math.Abs(ordinal_dict - DoseCount) * (limit / 20));
         }
 
         /// <summary>
@@ -193,9 +193,9 @@ namespace AlgorithmData
 
             //不同縣市則比對兩個區域是不是一樣，一樣就是同區不同市
             if (targetArea == queryArea)
-                return 0.8;
+                return 0.95;
 
-            return 0.5;
+            return 0.9;
         }
 
         #endregion
