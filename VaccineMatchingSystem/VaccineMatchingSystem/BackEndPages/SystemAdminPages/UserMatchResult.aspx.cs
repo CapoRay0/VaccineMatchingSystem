@@ -1,4 +1,5 @@
 ﻿using AlgorithmData;
+using DataFormatTransfer;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -83,6 +84,7 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
 
             //取得演算法流水號
             int algID = MatchManager.GetAlgID((Guid)dataRow[0]);
+            Session["algID"] = algID;
             //以演算法流水號取得配對結果紀錄表
             DataTable matchResult = MatchManager.GetMatchingRecord(algID);
 
@@ -92,6 +94,7 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
 
 
             btnGetVaccData.Visible = false;
+            btn_MatchResToXls.Visible = true;
         }
 
         protected void btnGetVaccDataCancel_Click(object sender, EventArgs e)
@@ -105,6 +108,34 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
             Response.Redirect("VaccineMatch.aspx");
         }
 
+        /// <summary>
+        /// 將匹配結果轉為excel
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void btn_MatchResToXls_Click(object sender, EventArgs e)
+        {
+            int algID = (int)Session["algID"];
+            DataTable dt = MatchManager.GetMatchingRecord(algID);
 
+            //取得機器+user name
+            var loginAccount = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+            //取得機器名
+            var machineName = Environment.MachineName;
+            //讓loginAccount減去機器名
+            loginAccount = loginAccount.Remove(0, machineName.Length + 1);
+            string outputPath = $@"C:\Users\{loginAccount}\Downloads\匹配結果.xlsx";
+
+
+            if (ExcelDataManager.DataTableToExcel(dt, outputPath))
+            {
+                this.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('報表轉換成功!')</script>");
+            }
+            else
+            {
+                this.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('報表轉換失敗!')</script>");
+            }
+
+        }
     }
 }

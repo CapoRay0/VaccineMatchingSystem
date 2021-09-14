@@ -18,7 +18,7 @@ namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
                 Response.Redirect("/FrontEndPages/Login.aspx");
                 return;
             }
-            this.DropDownList1.SelectedIndex = 0;
+            
 
             var CurrentUser = AuthManager.GetCurrentUser();
             this.txtName.Text = CurrentUser.Name;

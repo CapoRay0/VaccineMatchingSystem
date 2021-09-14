@@ -35,6 +35,7 @@
         <br /><br /><br /><br /><br /><br /><br /><br />
     <div class="d-grid gap-2 col-6 mx-auto">
         <asp:Button class="btn btn-outline-success btn-lg" ID="btnVaccineMatch" runat="server" Text="進行新一輪的配對" OnClick="btnVaccineMatch_Click" />
+        <asp:Button class="btn btn-outline-success btn-lg" ID="btn_MatchResToXls" runat="server" Text="Excel下載" OnClick="btn_MatchResToXls_Click" Visible="false"/>
     </div>
     <br /><br /><br />
 </asp:Content>
