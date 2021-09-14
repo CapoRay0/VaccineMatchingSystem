@@ -23,7 +23,7 @@ namespace DevloperCtrl
             //------資料模組------//
             //Guid userGuid = Guid.NewGuid();
             string userName_Acc_pwd = "User" + (count + 1);
-            int userAge = new Random().Next(1, 100);
+            int userAge = new Random().Next(22, 78);
             int occuListPicker = new Random().Next(0, OccupationList.Count);
             string userOccupation = OccupationList[occuListPicker];
             var map = CityModel.CreateCityModel();

@@ -32,7 +32,8 @@ namespace VaccineMatchingSystem.FrontEndPages
 
 
             //Response.Redirect("Login.aspx");
-            this.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('您的密碼已更改成功!')</script>");
+            //this.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('您的密碼已更改成功!')</script>");
+            Response.Write("<Script language='JavaScript'>alert('您的密碼已更改成功!'); location.href='Login.aspx'; </Script>");
         }
 
         private bool CheckInput(out List<string> errorMsgList)
