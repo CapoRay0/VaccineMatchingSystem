@@ -98,11 +98,11 @@ namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
                 foreach (DataRow dr in dt.Rows)
                 {
                     Vaccination item = new Vaccination();
-                    item.VGUID = dr.Field<Guid>("VGUID");
+                    //item.VGUID = dr.Field<Guid>("VGUID");
                     item.VName = dr.Field<string>("VName");
-                    item.Quantity = dr.Field<int>("Quantity");
-                    item.VBatch = dr.Field<int>("VBatch");
-                    item.IsMatched = dr.Field<int>("IsMatched");
+                    //item.Quantity = dr.Field<int>("Quantity");
+                    //item.VBatch = dr.Field<int>("VBatch");
+                    //item.IsMatched = dr.Field<int>("IsMatched");
 
                     VaccineName.Add(item);
                 }

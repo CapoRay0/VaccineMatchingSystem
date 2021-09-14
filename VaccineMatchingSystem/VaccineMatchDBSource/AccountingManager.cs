@@ -152,13 +152,9 @@ namespace VaccineMatchDBSource
             string connectionString = DBHelper.GetConnectionString();
             string dbCommandString =
 
-                $@"SELECT [VGUID]
-                         ,[VName]
-                         ,[Quantity]
-                         ,[VBatch]
-                         ,[IsMatched]
+                $@"SELECT [VName]
                      FROM [VaccineInventory]
-                     GROUP BY [VName],[VGUID],[Quantity],[VBatch],[IsMatched]
+                     GROUP BY [VName]
                 ";
 
             List<SqlParameter> list = new List<SqlParameter>();
