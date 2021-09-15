@@ -9,14 +9,14 @@
         <asp:Label class="col-form-label-lg" ID="lblEmail" runat="server" Text="Email"></asp:Label>
         <asp:TextBox class="form-control" ID="txtEmail" runat="server" TextMode="Email" placeholder="請在此輸入您的信箱"></asp:TextBox><br />
 
-        <asp:Label class="col-form-label-lg" ID="lblReaseon" runat="server" Text="請選取不願意施打的原因"></asp:Label>
+        <asp:Label class="col-form-label-lg" ID="lblReaseon" runat="server" Text="請選取問題"></asp:Label>
        
         <asp:DropDownList class="form-control" ID="DropDownList1" runat="server">
             <asp:ListItem Value="0">系統設計不友善</asp:ListItem>
             <asp:ListItem Value="1">疫苗種類過少</asp:ListItem>
             <asp:ListItem Value="2">基本資料有誤</asp:ListItem>
             <asp:ListItem Value="3">不知道如何使用系統</asp:ListItem>
-            <asp:ListItem Value="4">其他原因</asp:ListItem>
+            <asp:ListItem Value="4">其他</asp:ListItem>
         </asp:DropDownList><br />
 
         <asp:Label class="col-form-label-lg" ID="lblFeedback" runat="server" Text="意見回饋"></asp:Label>

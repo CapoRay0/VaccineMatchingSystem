@@ -18,7 +18,7 @@
                 <asp:BoundField HeaderText="使用者姓名"  DataField="FName"/>
                 <asp:BoundField HeaderText="使用者信箱"  DataField="Email"/>
                 <asp:BoundField HeaderText="使用者回饋"  DataField="Opinion"/>
-                <asp:TemplateField HeaderText="不願施打理由"  >
+                <asp:TemplateField HeaderText="問題名稱"  >
                     <ItemTemplate>
                         <asp:Label ID="lblReasob" runat="server"></asp:Label>
                     </ItemTemplate>

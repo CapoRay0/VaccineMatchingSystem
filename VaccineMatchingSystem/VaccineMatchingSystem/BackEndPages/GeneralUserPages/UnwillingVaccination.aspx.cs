@@ -60,7 +60,7 @@ namespace VaccineMatchingSystem.BackEndPages.GeneralUserPages
             }
 
             DBHelper.InsertUserFeedback(CurrentUserGuid, inp_Name, inp_Email, Reason, Feedback, RecSysUpdate);
-            Response.Redirect("/FrontEndPages/Default.aspx");
+            Response.Redirect("LoginDefaultG.aspx");
         }
 
         protected void btnClear_Click(object sender, EventArgs e)
