@@ -39,6 +39,11 @@ namespace VaccineMatchDBSource
             }
         }
 
+        /// <summary>
+        /// 民眾登記意願 (插入意願至意願登記表)
+        /// </summary>
+        /// <param name="userGuid">民眾GUID</param>
+        /// <param name="WillingRecord">疫苗名稱</param>
         public static void InsertUserWillingVaccin(Guid userGuid, string WillingRecord)
         {
             string connStr = DBHelper.GetConnectionString();
@@ -71,6 +76,12 @@ namespace VaccineMatchDBSource
                 logger.WriteLog(ex);
             }
         }
+
+        /// <summary>
+        /// 檢查意願登記表中是否有意願並處於有效中
+        /// </summary>
+        /// <param name="userGuid">民眾GUID</param>
+        /// <returns></returns>
         public static bool CheckWillingIfChecked(Guid userGuid)
         {
             string connStr = DBHelper.GetConnectionString();
@@ -101,7 +112,12 @@ namespace VaccineMatchDBSource
             }
         }
 
-
+        /// <summary>
+        /// 用GUID來檢查意願登記表中是否有值
+        /// </summary>
+        /// <param name="userGuid">民眾GUID</param>
+        /// <param name="WillingVName"></param>
+        /// <returns></returns>
         public static bool CheckSingleWillingIsNull(Guid userGuid, string WillingVName)
         {
             string connStr = DBHelper.GetConnectionString();
@@ -135,7 +151,9 @@ namespace VaccineMatchDBSource
         }
 
 
-
+        /// <summary>
+        /// 疫苗庫存表的Model
+        /// </summary>
         public class Vaccination
         {
             public Guid VGUID { get; set; }

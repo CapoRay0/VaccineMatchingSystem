@@ -436,6 +436,11 @@ namespace VaccineMatchDBSource
             }
         }
 
+        /// <summary>
+        /// 以民眾身分查詢是否匹配到疫苗
+        /// </summary>
+        /// <param name="UserID">民眾GUID</param>
+        /// <returns></returns>
         public static DataTable GetResultForGeneralUser(Guid UserID)
         {
             string connectionString = DBHelper.GetConnectionString();
@@ -498,7 +503,8 @@ namespace VaccineMatchDBSource
             }
         }
 
-        //-----------------------------//
+
+
         /// <summary>
         /// 以演算法ID查詢配到的民眾資料  (未完成)
         /// </summary>
@@ -602,7 +608,11 @@ namespace VaccineMatchDBSource
             }
         }
 
-
+        /// <summary>
+        /// 民眾取消預約
+        /// </summary>
+        /// <param name="UserID">民眾GUID</param>
+        /// <returns></returns>
         public static bool CheckWillingIsNull(Guid UserID)
         {
             string connStr = DBHelper.GetConnectionString();
@@ -630,6 +640,11 @@ namespace VaccineMatchDBSource
                 return false;
             }
         }
+
+        /// <summary>
+        /// 刪除預約 (資料表內容不應該被真的刪除，應將意願的IsEffective改成非有效，但方便展示先這樣寫)
+        /// </summary>
+        /// <param name="UserID"></param>
         public static void DeleteWilling(Guid UserID)
         {
             string connectionString = DBHelper.GetConnectionString();

@@ -197,7 +197,6 @@ namespace AlgorithmData
 
             return 0.9;
         }
-
         #endregion
     }
 }

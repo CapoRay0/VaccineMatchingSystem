@@ -193,6 +193,7 @@ namespace VaccineMatchDBSource
             }
         }
 
+
         public static DataTable GetGeneralUserInfo()
         {
             string connectionString = DBHelper.GetConnectionString();

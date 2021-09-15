@@ -343,7 +343,7 @@ namespace DevloperCtrl
             }
         }
 
-        //----------------------------//
+
 
         /// <summary>
         /// 清空演算法參數紀錄
@@ -485,8 +485,6 @@ namespace DevloperCtrl
                 return false;
             }
         }
-
-
 
     }
 }

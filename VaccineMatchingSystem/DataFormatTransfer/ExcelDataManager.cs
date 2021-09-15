@@ -21,7 +21,6 @@ namespace DataFormatTransfer
         /// </summary>
         private static string[] allowExt = { ".XLS", ".XLSX", ".xls", ".xlsx" };
 
-
         /// <summary>
         /// Excel轉換為DataTable
         /// </summary>
@@ -171,6 +170,8 @@ namespace DataFormatTransfer
             }
         }
 
+        /// <summary> 取得民眾回饋 </summary>
+        /// <returns></returns>
         public static DataTable GetUserFeedback()
         {
             string connectionString = DBHelper.GetConnectionString();
@@ -196,6 +197,8 @@ namespace DataFormatTransfer
             }
         }
 
+        /// <summary> 讀取匯入疫苗資料 </summary>
+        /// <returns></returns>
         public static DataTable GetCurrentVaccInfo()
         {
             string connStr = DBHelper.GetConnectionString();
@@ -207,9 +210,8 @@ namespace DataFormatTransfer
                     FROM [VaccineInventory]
                     
                 ";
-            // 用List把Parameter裝起來，再裝到共用參數
             List<SqlParameter> list = new List<SqlParameter>();
-            try // 讓錯誤可以被凸顯，因此 TryCatch 不應該重構進 DBHelper
+            try
             {
                 return DBHelper.ReadDataTable(connStr, dbCommand, list);
             }
@@ -220,30 +222,6 @@ namespace DataFormatTransfer
             }
         }
 
-        public static DataTable GetCurrentVaccInfoByVBatch(int VBatch)
-        {
-            string connStr = DBHelper.GetConnectionString();
-            string dbCommand =
-                $@" SELECT
-                        [VBatch],
-                        [VName],
-                        [Quantity]
-                    FROM [VaccineInventory]
-                    WHERE [VBatch]= @VBatch                    
-                ";
-            // 用List把Parameter裝起來，再裝到共用參數
-            List<SqlParameter> list = new List<SqlParameter>();
-            list.Add(new SqlParameter("@VBatch", VBatch));
-            try // 讓錯誤可以被凸顯，因此 TryCatch 不應該重構進 DBHelper
-            {
-                return DBHelper.ReadDataTable(connStr, dbCommand, list);
-            }
-            catch (Exception ex)
-            {
-                logger.WriteLog(ex);
-                return null;
-            }
-        }
 
         #region 將資料insert進db的
         /// <summary>
