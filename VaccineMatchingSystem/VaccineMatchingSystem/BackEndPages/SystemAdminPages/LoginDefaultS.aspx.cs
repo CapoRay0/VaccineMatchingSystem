@@ -50,22 +50,22 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         {
             Response.Redirect("GetFeedback.aspx");
         }
-
         #endregion
+
         #region  excel進db
         /// <summary>
         /// 匯入使用者資料    (把UserInfo的excel轉化為DT，並且輸入至DB)
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        protected void btnInsetUserInfo_Click(object sender, EventArgs e)
+        protected void btnInsertUserInfo_Click(object sender, EventArgs e)
         {
             InsertDTIntoSQL Vacc = InsertUserInfoIntoSQL; //指定委派方法的具體內容
             TryInsertExcel(tempPathUserInfo, ltUserInfoUploadWarning, Vacc);
         }
 
         /// <summary>
-        /// 匯入本批疫苗資料 (把VaccQuin的excel轉化為DT，並且輸入至DB)
+        /// 匯入本批疫苗資料  (把VaccQuin的excel轉化為DT，並且輸入至DB)
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -97,11 +97,11 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
                 literal.Text = "請檢查路徑或檔案的正確性";
             path = null;
         }
-
         #endregion
+
         #region db到網頁
         /// <summary>
-        /// 讀取本機使用者的資料    (把DB裡面的UserInfo抓出，Bind到頁面)
+        /// 讀取匯入使用者的資料   (把DB裡面的UserInfo抓出，Bind到頁面)
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -113,7 +113,7 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         }
 
         /// <summary>
-        /// 讀取匯入疫苗資料    (把DB裡面的VaccData抓出，Bind到頁面)
+        /// 讀取匯入疫苗資料       (把DB裡面的VaccData抓出，Bind到頁面)
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -124,6 +124,7 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
             this.RepeaterShowVacc.DataBind();
         }
         #endregion
+
         #region 讀取本機excel
         /// <summary>
         /// 從本機讀取本批次使用者資料(Excel>>C#)，並bind到頁面上
@@ -209,24 +210,11 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
             return Guid.Parse(pf);
         }
 
-
-        /// <summary>
-        /// 讀取匯入的本批次疫苗資料 (把SQL特定批次的疫苗資料抓到C#上，讓網頁顯示)
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        protected void btn_Click(object sender, EventArgs e)
-        {
-
-        }
-
         protected void gvReadUserInfoFromExel_RowDataBound(object sender, GridViewRowEventArgs e)
         {
 
         }
 
-
-
-
+        
     }
 }

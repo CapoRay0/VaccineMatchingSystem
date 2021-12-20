@@ -54,7 +54,7 @@ namespace VaccineMatchingSystem.FrontEndPages
             //驗證驗證碼
             #region 開發時隱藏
 
-            if (this.txtConfirmCode.Text.Trim() != Session["Verify"].ToString().Trim())
+            if (this.txtConfirmCode.Text.Trim().ToUpper() != Session["Verify"].ToString().Trim().ToUpper())
             {
                 this.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>alert('驗證碼不正確，請確認內容及大小寫')</script>");
                 return;

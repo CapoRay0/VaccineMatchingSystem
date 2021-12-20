@@ -179,7 +179,7 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
             //將眾人分數由高至低排序
             var lineupedScoreList = from entry in scoreDictionary orderby entry.Value descending select entry;
 
-            int requestNum = (int)Session["vaccNum"]; //取前n個
+            int requestNum = (int)Session["vaccNum"]; //取"疫苗數量"個人
             List<Guid> BaiDui = new List<Guid>();
             foreach (var item in lineupedScoreList)
             {
@@ -270,16 +270,13 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
             //把得到的疫苗情報拿去查詢演算法參數
             DataRow AlgWeightList = MatchManager.GetAlgWeightList((Guid)dataRow[0]);
 
+            phAlgWeightList.Visible = true;
             if (AlgWeightList != null)  //如果DB中已經有資料
             {
-                phAlgWeightList.Visible = true;
                 return;
             }
-            else
-            {
-                phAlgWeightList.Visible = true;
-            }
-            btnGetVaccData.Visible = false;
+
+            btnGetVaccData.Visible = false; //讓確定按鈕消失
 
         }
 

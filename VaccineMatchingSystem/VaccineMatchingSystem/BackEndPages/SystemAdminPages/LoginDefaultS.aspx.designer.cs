@@ -96,13 +96,13 @@ namespace VaccineMatchingSystem.BackEndPages.SystemAdminPages
         protected global::System.Web.UI.WebControls.Button btnReadUserInfo;
 
         /// <summary>
-        /// btnInsetUserInfo 控制項。
+        /// btnInsertUserInfo 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnInsetUserInfo;
+        protected global::System.Web.UI.WebControls.Button btnInsertUserInfo;
 
         /// <summary>
         /// gvReadUserInfoFromExel 控制項。

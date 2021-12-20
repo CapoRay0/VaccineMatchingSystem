@@ -21,22 +21,17 @@
     <hr />
     <br />
 
-
     <div class="container">
         <asp:Literal ID="ltUserInfoUploadWarning" runat="server"></asp:Literal><br />
         <asp:FileUpload type="file" class="form-control" ID="fuUserInfoExcel" runat="server" /><br />
 
 
-
-
         <div class="d-grid gap-2 d-md-flex justify-content-md-center">
 
             <asp:Button class="btn btn-outline-primary" ID="btnReadUserInfo" runat="server" Text="讀取本批次使用者資料" Width="100%" OnClick="btnReadUserInfo_Click" /><br />
-            <asp:Button class="btn btn-outline-primary" ID="btnInsetUserInfo" runat="server" Text="匯入使用者資料" Width="100%" OnClick="btnInsetUserInfo_Click" /><br />
+            <asp:Button class="btn btn-outline-primary" ID="btnInsertUserInfo" runat="server" Text="匯入使用者資料" Width="100%" OnClick="btnInsertUserInfo_Click" /><br />
 
         </div>
-
-
 
         <asp:GridView ID="gvReadUserInfoFromExel" runat="server" AutoGenerateColumns="false" OnRowDataBound="gvReadUserInfoFromExel_RowDataBound"
             CellPadding="4" ForeColor="#333333" GridLines="None">
@@ -73,7 +68,6 @@
         <asp:FileUpload type="file" class="form-control" ID="fuVaccQuinExcel" runat="server" /><br />
 
 
-
         <div class="d-grid gap-2 d-md-flex justify-content-md-center">
             <asp:Button class="btn btn-outline-success" ID="btnReadVaccInfoThisBatch" runat="server" Text="讀取本批次疫苗資料" Width="100%" OnClick="btnReadVaccInfoThisBatch_Click" /><br />
             <asp:Button class="btn btn-outline-success" ID="btnInsertVaccQuin" runat="server" Text="匯入本批疫苗資料" Width="100%" OnClick="btnInsertVaccQuin_Click" /><br />
@@ -90,9 +84,6 @@
             </ItemTemplate>
         </asp:Repeater>
     </div>
-
-
-
 
 
 
